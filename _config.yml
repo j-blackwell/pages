@@ -3,4 +3,4 @@ title: J Robinson
 description: Portfolio
 
 #logo: [Location of the logo]
-#show_downloads: ["true" or "false" to indicate whether to provide a download URL]
+show_downloads: ["true"]
