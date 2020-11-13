@@ -1,5 +1,5 @@
-# jrstats.github.io
-Portfolio
+# James Robinson
+Data Consultant
 
 ``` python
 import pandas as pd
