@@ -34,4 +34,9 @@ You can test that it is working by running `winconsole cmd` and then running the
 
 7. Add the following to the launch options for Rocket League in steam: `alacritty -e /home/jrob/.wine/drive_c/"Program Files"/BakkesMod/rocket.sh && echo %command% &>/dev/null`. If you had any pre-existing launch commands, add it before `$_PROTON` in the final line of `rocket.sh`.
 8. Run Rocket League from steam.
+9. Initially, I got an injection failed message _"It looks like injection was unsuccessful, this probably means you're missing a dependency (vc_redist.x64.exe). Please download it from http://bakkesmode.wikia.com/wiki/Troubleshooting"._ The current advice from the Troubleshooting page is:
+
+- Download the latest version of Bakkesmod from http://bakkesmod.com/
+- Download the latest x64 VC Redist here.  https://aka.ms/vs/16/release/vc_redist.x64.exe
+- Restart your PC. Hold Shift while pressing the reset button. (Not linux applicable)
 
