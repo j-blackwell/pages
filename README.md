@@ -42,8 +42,7 @@ Lead development and analysis on a web-scraping project. Implemented a process t
 
 ## Education 🎓
 
-
-#### University of Warwick 
+#### University of Warwick 
 *2014-2017*
 - BSc Mathematics, Operational Research, Statistics & Economics
   - 2:1 Grade
