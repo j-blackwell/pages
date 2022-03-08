@@ -78,4 +78,5 @@ I'd like to contributions to open-source code projects in the medium-term.
 - [Email](mailto:james@robinson.fyi)
 - [Github](https://github.com/jrstats)
 - [Website](https://jrstats.github.io)
-- [Player Profile](https://floorball.sport/player/1539596530/)
+- [Player Profile - International](https://floorball.sport/player/1539596530/)
+- [Player Profile - UKFF](https://englishfloorball.leaguerepublic.com/player/781206860.html)
