@@ -60,8 +60,7 @@ Took mostly Statistics courses with a particular interest in statistical modelli
   - Economics (A)
 - 11x GCSE (A*-B)
 
-## Hobbies 🥅
-
+## Hobbies 🥅
 
 #### Floorball
 
