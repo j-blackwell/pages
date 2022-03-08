@@ -1,48 +1,81 @@
-Senior Data Engineer at [Aiimi](https://www.aiimi.com).
+Senior Data Consultant at [Aiimi](https://www.aiimi.com). 
+
+I'm currently in my 5th year of professional experience.
+I've worked as a data scientist and data engineer across the utilities and information sectors.
+I like building things related to data and hate doing things manually - if I can write a script to do something tedious, I definitely will!
+I also like doing things the right way, and using best practices.
 
 
-## Skills
+## Skills 💻
 - Python
 - SQL
-- Databricks / pyspark
+- Databricks
 - Azure platform
   - Microsoft Certified: Azure Data Engineer Associate (Exams passed: DP-200, DP-201)
 
-``` python
-```
 
-## Experience
+## Experience 🗒
 
 #### Aiimi
-**2019-Present**
+*2019-Present*
 
-Senior Data Consultant (2021-Present)
+- Senior Data Consultant (2021-Present)
+  - Platform Migration - Utilities
+- Data Consultant (2019-2021)
+  - COVID Workforce Management - Utilities
+  - Utility Demand Modelling - Utilities
+  - Asset Condition Modelling - Utilities
+  - Document Classification  - Aiimi Labs R&D
 
-Data Consultant (2019-2021)
-
+I've worked on both data science and engineering projects whilst at Aiimi. 
+The platform migration project has involved working on a relatively new data platform, translating data pipelines from the old platform to the new, making several enhancements to the new platform along the way.
+It has been within an agile framework and has involved plenty of business user engagement throughout.
 
 #### Havas Media Group
-**2018-2019**
+*2018-2019*
 
-Junior Data Scientist
+- Junior Data Scientist
 
-## Education
+Lead development and analysis on a web-scraping project. Implemented a process to interpret the results of an econometric model. Developed an R-Shiny app for conducting econometric analysis.
+
+## Education 🎓
 
 #### University of Warwick 
-**2014-2017**
-BSc Mathematics, Operational Research, Statistics & Economics
-2:1
+*2014-2017*
+- BSc Mathematics, Operational Research, Statistics & Economics
+  - 2:1 Grade
+
+Took mostly Statistics courses with a particular interest in statistical modelling, multivariate statistics, and Bayesian statistics.
 
 
 #### Aylesbury Grammar School
-**2007-2014**
-4x A-Levels:
+*2007-2014*
+- 4x A-Levels
   - Maths (A*)
   - Further Maths (A*)
   - Chemistry (A*)
   - Economics (A)
+- 11x GCSE (A*-B)
 
-
-## Hobbies
+## Hobbies 🥅
 
 #### Floorball
+
+At uni I picked up a strange sounding sport when I decided that £600+ for a set of ice hockey gear was too much for a first year student.
+Cast your mind back to the plastic hockey sticks and balls that you played with in junior school and imagine that someone made this into a real sport.
+It's not that popular in the UK (let's face it, the name doesn't help), but has a great following in north and central Europe.
+The plus-side of playing a sport that no-one in your country has heard of, is that the pool of players for the national team is very small.
+I've been lucky enough to represent Great Britain in 14 matches, scoring 4 goals in this time.
+
+#### Nerdy stuff
+I enjoy doing some hobby programming when I can find the time.
+Recently, I've looked at creating code for a smart mirror in python, and setting up email notifications whenever [@BrentfordFC](https://twitter.com/BrentfordFC/) (COYB!) tweet about tickets going on sale. You can find the link to my github page below.
+I'm also a fan of the Linux desktop, currently sporting the latest Fedora release.
+I'd like to contributions to open-source code projects in the medium-term.
+
+## Links 🔗
+- [LinkedIn](https://www.linkedin.com/in/james-robinson-data/)
+- [Email](mailto:james@robinson.fyi)
+- [Github](https://github.com/jrstats)
+- [Website](https://jrstats.github.io)
+- [Player Profile](https://floorball.sport/player/1539596530/)
