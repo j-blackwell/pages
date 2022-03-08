@@ -16,6 +16,7 @@ I also like doing things the right way, and using best practices.
 
 ## Experience 🗒
 
+
 #### Aiimi
 *2019-Present*
 
@@ -31,6 +32,7 @@ I've worked on both data science and engineering projects whilst at Aiimi.
 The platform migration project has involved working on a relatively new data platform, translating data pipelines from the old platform to the new, making several enhancements to the new platform along the way.
 It has been within an agile framework and has involved plenty of business user engagement throughout.
 
+
 #### Havas Media Group
 *2018-2019*
 
@@ -39,6 +41,7 @@ It has been within an agile framework and has involved plenty of business user e
 Lead development and analysis on a web-scraping project. Implemented a process to interpret the results of an econometric model. Developed an R-Shiny app for conducting econometric analysis.
 
 ## Education 🎓
+
 
 #### University of Warwick 
 *2014-2017*
@@ -59,6 +62,7 @@ Took mostly Statistics courses with a particular interest in statistical modelli
 
 ## Hobbies 🥅
 
+
 #### Floorball
 
 At uni I picked up a strange sounding sport when I decided that £600+ for a set of ice hockey gear was too much for a first year student.
@@ -67,11 +71,13 @@ It's not that popular in the UK (let's face it, the name doesn't help), but has 
 The plus-side of playing a sport that no-one in your country has heard of, is that the pool of players for the national team is very small.
 I've been lucky enough to represent Great Britain in 14 matches, scoring 4 goals in this time.
 
+
 #### Nerdy stuff
 I enjoy doing some hobby programming when I can find the time.
 Recently, I've looked at creating code for a smart mirror in python, and setting up email notifications whenever [@BrentfordFC](https://twitter.com/BrentfordFC/) (COYB!) tweet about tickets going on sale. You can find the link to my github page below.
 I'm also a fan of the Linux desktop, currently sporting the latest Fedora release.
 I'd like to contributions to open-source code projects in the medium-term.
+
 
 ## Links 🔗
 - [LinkedIn](https://www.linkedin.com/in/james-robinson-data/)
