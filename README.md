@@ -8,7 +8,7 @@ I like building things related to data and hate doing things manually - if I can
 I also like doing things the right way, and using best practices.
 
 I am passionate about the environment.
-The fight against climate change is the problem of our generation and I am keen to use whatever skills of mine that are most valuable in this battle.
+The fight against climate change is the problem of our generation and I am keen to use any skills of mine that are valuable in the battle.
 
 
 ## Skills 💻
