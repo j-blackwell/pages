@@ -4,11 +4,11 @@ Senior Data Consultant at [Aiimi](https://www.aiimi.com).
 
 I'm currently in my 5th year of professional experience.
 I've worked as a data scientist and data engineer across the utilities and information sectors.
-I like building things related to data and hate doing things manually - if I can write a script to automate something tedious, I definitely will!
-I also like doing things the right way, and using best practices.
+I like building things related to data and hate doing things manually - if I can write some code to automate a tedious or repetitive process, I definitely will!
+I also like doing things the right way, using best practices and the right tool for the job.
 
 I am passionate about the environment.
-The fight against climate change is the problem of our generation and I am keen to use my skills in the most valuable way in this battle.
+The fight against climate change is the problem of our generation and I'm keen to use my skills in the most valuable way to combat it.
 
 
 ## Skills 💻
