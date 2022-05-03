@@ -4,7 +4,7 @@ Senior Data Consultant at [Aiimi](https://www.aiimi.com).
 
 I'm currently in my 5th year of professional experience.
 I've worked as a data scientist and data engineer across the utilities and information sectors.
-I like building things related to data and hate doing things manually - if I can write a script to do something tedious, I definitely will!
+I like building things related to data and hate doing things manually - if I can write a script to automate something tedious, I definitely will!
 I also like doing things the right way, and using best practices.
 
 I am passionate about the environment.
