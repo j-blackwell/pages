@@ -24,7 +24,6 @@ The fight against climate change is the problem of our generation and I'm keen t
   - Microsoft Certified: Azure Data Engineer Associate (Exams passed: DP-200, DP-201)
   - Azure Data Factory
   - Storage
-  - Cosmos DB
 
 
 ## Experience 🗒
@@ -80,10 +79,11 @@ Took mostly Statistics courses with a particular interest in statistical modelli
 #### Floorball
 
 At uni I picked up a strange sounding sport when I decided that £600+ for a set of ice hockey gear was too much for a first year student.
-Cast your mind back to the plastic hockey sticks and balls that you played with in junior school and imagine that someone made this into a real sport.
+Cast your mind back to the plastic hockey sticks and balls that you played with in junior school and imagine that someone made this into a real sport - [dramatic video explanation for anyone who's interested](https://www.youtube.com/watch?v=erB_FWi9-T8).
 It's not that popular in the UK (let's face it, the name doesn't help), but has a great following in north and central Europe.
 The plus-side of playing a sport that no-one in your country has heard of, is that the pool of players for the national team is very small.
 I've been lucky enough to represent Great Britain in 14 matches, scoring 4 goals in this time.
+
 
 
 #### Nerdy stuff
