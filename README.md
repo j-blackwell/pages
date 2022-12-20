@@ -110,7 +110,9 @@ I've been lucky enough to represent Great Britain in 14 matches, scoring 4 goals
 
 #### Nerdy stuff
 I enjoy doing some hobby programming when I can find the time.
-Recently, I've looked at creating code for a smart mirror in python, and setting up email notifications whenever [@BrentfordFC](https://twitter.com/BrentfordFC/) (COYB!) tweet about tickets going on sale. You can find the link to my github page below where you can also find some of the other projects that I've worked on.
+I've been looking at this year's advent of code slowly and steadily. You can take a look at my solutions to this year's problems on my [github](https://github.com/jrstats/adventofcode/tree/main/2022) page.
+When I've had a bit more time, I've also created most of a smart mirror in python, and set up email notifications whenever [@BrentfordFC](https://twitter.com/BrentfordFC/) (COYB!) tweet about tickets going on sale. Again, feel free to take a look at them on my [github](https://github.com/jrstats) page.
+
 
 I'm also a fan of the Linux desktop, currently sporting the latest Fedora release. I love the open-source philosophy, and I'd like to contribute to open-source projects in the future.
 
