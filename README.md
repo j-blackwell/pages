@@ -54,6 +54,11 @@ The fight against climate change is the problem of our generation and I'm keen t
 I always have a focus beyond day-to-day delivery and have helped introduce good practices and work accelerators whilst on my projects.
 Outside of my day-to-day role, I have also, been involved with:
 
+- Green initiative (2019-present)
+  - Hosted an internal company talk on the environment
+  - Lead an initiative to use our data skills to improve our internal carbon reporting
+  - Pitched the idea to the CEO and ran a week-long proof of concept with a team of data engineers and scientists
+  - Gained approval to implement the solutions into our internal product
 - Data community leader (2022-present)
   - Developing resources and creating an environment for data consultants to connect and share ideas, lessons learned and best practices
 - Career shifting mentor (2022-present)
