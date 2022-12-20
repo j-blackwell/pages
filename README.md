@@ -2,9 +2,9 @@ Senior Data Consultant at [Aiimi](https://www.aiimi.com).
 
 ## Profile 🌍
 
-I'm currently in my 5th year of professional experience.
-I've worked as a data scientist and data engineer across the utilities and information sectors.
-I like building things related to data and hate doing things manually - if I can write some code to automate a tedious or repetitive process, I definitely will!
+I'm currently in my 6th year of professional experience.
+I've worked as a data scientist and data engineer mostly in the utilities and information sectors.
+I like building things related to data and hate doing things manually!
 I also like doing things the right way, using best practices and the right tool for the job.
 
 I am passionate about the environment.
@@ -13,17 +13,16 @@ The fight against climate change is the problem of our generation and I'm keen t
 
 ## Skills 💻
 - Python
-  - object-oriented
   - pandas
   - pyspark
   - sklearn
+  - OOP
   - flask
 - SQL
 - Databricks
 - Azure platform
   - Microsoft Certified: Azure Data Engineer Associate (Exams passed: DP-200, DP-201)
-  - Azure Data Factory
-  - Storage
+
 
 
 ## Experience 🗒
@@ -32,8 +31,19 @@ The fight against climate change is the problem of our generation and I'm keen t
 #### Aiimi
 *2019-Present*
 
-- Senior Data Consultant (2021-Present)
+- Senior Data Engineer (2021-Present)
   - Platform Migration - Utilities
+    - Translating data pipelines from the old on-premise data warehouse to a new bespoke and evolving cloud platform
+    - Developing and promoting self-service data models into production
+  - Effluent report - Utilities
+    - Combining data from various business sources to compare legally agreed discharge to actual volumes
+    - Working within an agile squad
+    - Engaging with business stakeholders
+  - Carbon Reporting - Internal
+    - Lead initiative to improve our internal carbon reporting methods and widen our capabilities
+    - Automate estimation of emissions from travel expenses, and office power consumption
+    - Researched and implemented calculation of emissions from cloud resources
+    - Gained approval from CEO to implement the calculations into our internal product
 - Data Consultant (2019-2021)
   - COVID Workforce Management - Utilities
   - Zero Emmissions Hack (winner) - Utilities
@@ -41,19 +51,26 @@ The fight against climate change is the problem of our generation and I'm keen t
   - Asset Condition Modelling - Utilities
   - Document Classification  - Aiimi Labs R&D
 
-I've worked on both data science and engineering projects whilst at Aiimi. 
-The platform migration project has involved working on a relatively new data platform, translating data pipelines from the old platform to the new, and promoting self-service data models into production.
-It has been within an agile framework and has involved plenty of business user engagement throughout.
-
 I always have a focus beyond day-to-day delivery and have helped introduce good practices and work accelerators whilst on my projects.
+Outside of my day-to-day role, I have also, been involved with:
+
+- Data community leader (2022-present)
+  - Developing resources and creating an environment for data consultants to connect and share ideas, lessons learned and best practices
+- Career shifting mentor (2022-present)
+  - Was chosen by head of data to help mentor a scrum master in becoming a data engineer
+  - Help focus their training and develop their skills
+- Apprentice mentor (2022-present)
+  - Mentoring an 18 year old data science apprentice
+  - Helping them transition from school into work
 
 
 #### Havas Media Group
 *2018-2019*
 
 - Junior Data Scientist
-
-Lead development and analysis on a web-scraping project. Implemented a process to interpret the results of an econometric model. Developed an R-Shiny app for conducting econometric analysis.
+  - Web-scraping analytics
+  - Automated the interpretation of an econometric model
+  - Developed an R-Shiny app for conducting econometric analysis.
 
 ## Education 🎓
 
@@ -61,8 +78,8 @@ Lead development and analysis on a web-scraping project. Implemented a process t
 *2014-2017*
 - BSc Mathematics, Operational Research, Statistics & Economics
   - 2:1 Grade
-
-Took mostly Statistics courses with a particular interest in statistical modelling, multivariate statistics, and Bayesian statistics.
+  - Took mostly statistics courses
+  - Particular interest in statistical modelling, multivariate statistics, and Bayesian statistics.
 
 
 #### Aylesbury Grammar School
