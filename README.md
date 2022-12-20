@@ -46,7 +46,7 @@ The fight against climate change is the problem of our generation and I'm keen t
     - Gained approval from CEO to implement the calculations into our internal product
 - Data Consultant (2019-2021)
   - COVID Workforce Management - Utilities
-  - Zero Emmissions Hack (winner) - Utilities
+  - Zero Emissions Hack (winner) - Utilities
   - Utility Demand Modelling - Utilities
   - Asset Condition Modelling - Utilities
   - Document Classification  - Aiimi Labs R&D
