@@ -1,4 +1,4 @@
-Senior Data Consultant at [Aiimi](https://www.aiimi.com). 
+Senior Data Engineer at [Aiimi](https://www.aiimi.com). 
 
 ## Profile 🌍
 
