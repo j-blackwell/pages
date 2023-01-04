@@ -22,6 +22,7 @@ The fight against climate change is the problem of our generation and I'm motiva
 - Databricks
 - Azure platform
   - Microsoft Certified: Azure Data Engineer Associate (Exams passed: DP-200, DP-201)
+  - Analysis Services and Power BI
 
 
 
@@ -51,7 +52,8 @@ The fight against climate change is the problem of our generation and I'm motiva
   - Asset Condition Modelling - Utilities
   - Document Classification  - Aiimi Labs R&D
 
-I always have a focus beyond day-to-day delivery and have helped introduce good practices and work accelerators whilst on my projects.
+I always have a focus beyond day-to-day delivery and have helped introduce good practices and work accelerators whilst on my projects. 
+During my project work, I have implemented a testing framework to improve data quality and a module to create a relational data model in Analysis Services using the bespoke data catalogue.
 Outside of my day-to-day role, I have also, been involved with:
 
 - Green initiative (2019-present)
