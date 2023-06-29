@@ -18,11 +18,15 @@ The fight against climate change is the problem of our generation and I'm motiva
   - OOP
   - flask
   - dagster
+  - great-expectations
 - SQL
 - Google Cloud Platform
 - Azure platform
   - Microsoft Certified: Azure Data Engineer Associate (Exams passed: DP-200, DP-201)
 - Databricks
+- CI/CD
+  - github actions
+- Terraform
 
 
 
