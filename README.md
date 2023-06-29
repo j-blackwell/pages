@@ -1,9 +1,8 @@
-Senior Data Engineer at [Aiimi](https://www.aiimi.com). 
+Data Engineer at [Ember](www.ember-climate.org)
 
 ## Profile 🌍
 
-I'm currently in my 6th year of professional experience.
-I've worked as a data scientist and data engineer mostly in the utilities and information sectors.
+I'm a data engineer with experience in data science and platform architecture across the water and energy sector.
 I like building things related to data and hate doing things manually!
 I also like doing things the right way, using best practices and the right tool for the job.
 
@@ -18,21 +17,24 @@ The fight against climate change is the problem of our generation and I'm motiva
   - sklearn
   - OOP
   - flask
+  - dagster
 - SQL
-- Databricks
+- Google Cloud Platform
 - Azure platform
   - Microsoft Certified: Azure Data Engineer Associate (Exams passed: DP-200, DP-201)
-  - Analysis Services and Power BI
+- Databricks
 
 
 
 ## Experience 🗒
 
+#### Ember
+*2023-present*
 
 #### Aiimi
-*2019-Present*
+*2019-2023*
 
-- Senior Data Engineer (2021-Present)
+- Senior Data Engineer (2021-2023)
   - Platform Migration - Utilities
     - Translating data pipelines from the old on-premise data warehouse to a new bespoke and evolving cloud platform
     - Developing and promoting self-service data models into production
@@ -56,17 +58,17 @@ I always have a focus beyond day-to-day delivery and have helped introduce good 
 During my project work, I have implemented a testing framework to improve data quality and a module to create a relational data model in Analysis Services using the bespoke data catalogue.
 Outside of my day-to-day role, I have also, been involved with:
 
-- Green initiative (2019-present)
+- Green initiative
   - Hosted an internal company talk on the environment
   - Lead an initiative to use our data skills to improve our internal carbon reporting
   - Pitched the idea to the CEO and ran a week-long proof of concept with a team of data engineers and scientists
   - Gained approval to implement the solutions into our internal product
-- Data community leader (2022-present)
+- Data community leader
   - Developing resources and creating an environment for data consultants to connect and share ideas, lessons learned and best practices
-- Career shifting mentor (2022-present)
+- Career shifting mentor
   - Was chosen by head of data to help mentor a scrum master in becoming a data engineer
   - Help focus their training and develop their skills
-- Apprentice mentor (2022-present)
+- Apprentice mentor
   - Mentoring an 18 year old data science apprentice
   - Helping them transition from school into work
 
