@@ -1,4 +1,4 @@
-Data Engineer at [Ember](www.ember-climate.org)
+Data Engineer at [Ember](https://www.ember-climate.org)
 
 ## Profile 🌍
 
@@ -12,13 +12,10 @@ The fight against climate change is the problem of our generation and I'm motiva
 
 ## Skills 💻
 - Python
-  - pandas
-  - pyspark
+  - pandas & pyspark
   - sklearn
-  - OOP
-  - flask
-  - dagster
-  - great-expectations
+  - flask & fastAPI
+  - dagster - I have also [contributed](https://github.com/dagster-io/dagster/pulls?q=is%3Apr+author%3Ajrstats+) to this open-source project
 - SQL
 - Google Cloud Platform
 - Azure platform
@@ -26,7 +23,6 @@ The fight against climate change is the problem of our generation and I'm motiva
 - Databricks
 - CI/CD
   - github actions
-- Terraform
 
 
 
