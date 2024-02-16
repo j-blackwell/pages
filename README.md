@@ -83,6 +83,9 @@ Outside of my day-to-day role, I have also, been involved with:
 #### Professional Certifications
 *2024*
 - Completed the Grantham Institute's [Clean Power Program](https://www.imperial.ac.uk/grantham/education/online-learning-clean-power-programme/)
+  - Why Move Towards Cleaner Power
+  - Creating a Pro-Renewables Environment
+  - Incorporating Renewable Energy in Electricity Grids
 
 *2021*
 - Gained the [Azure Data Engineer Associate certification](https://learn.microsoft.com/en-us/credentials/certifications/azure-data-engineer/)
@@ -111,9 +114,9 @@ Outside of my day-to-day role, I have also, been involved with:
 
 At uni I picked up a strange sounding sport when I decided that £600+ for a set of ice hockey gear was too much for a first year student.
 Cast your mind back to the plastic hockey sticks and balls that you played with in junior school and imagine that someone made this into a real sport - [dramatic video explanation for anyone who's interested](https://www.youtube.com/watch?v=erB_FWi9-T8).
-It's not that popular in the UK (let's face it, the name doesn't help), but has a great following in north and central Europe.
+It's not that popular in the UK (and let's face it, the name doesn't help), but has a great following in north and central Europe.
 The plus-side of playing a sport that no-one in your country has heard of, is that the pool of players for the national team is very small.
-So as a result, I've been lucky enough to represent Great Britain in 14 matches, scoring 4 goals in this time.
+So as a result, I've been lucky enough to represent Great Britain in 14 matches, scoring 4 goals in this time, but I think my team GB days are behind me now.
 
 
 
