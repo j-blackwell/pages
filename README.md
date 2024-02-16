@@ -12,19 +12,16 @@ The fight against climate change is the problem of our generation and I'm motiva
 
 ## Skills 💻
 - Python
-  - pandas & pyspark
-  - sklearn
-  - flask & fastAPI
   - dagster - I have also [contributed](https://github.com/dagster-io/dagster/pulls?q=is%3Apr+author%3Ajrstats+) to this open-source project
+  - pandas, polars & pyspark
+  - flask & fastAPI
 - SQL
 - Google Cloud Platform
-- Azure platform
-  - Microsoft Certified: Azure Data Engineer Associate (Exams passed: DP-200, DP-201)
+- Azure platform - Azure Data Engineer Associate certification
 - Databricks
 - CI/CD
   - github actions
-
-
+  - docker
 
 ## Experience 🗒
 
@@ -83,6 +80,14 @@ Outside of my day-to-day role, I have also, been involved with:
 
 ## Education 🎓
 
+#### Professional Certifications
+*2024*
+- Completed the Grantham Institute's [Clean Power Program](https://www.imperial.ac.uk/grantham/education/online-learning-clean-power-programme/)
+
+*2021*
+- Gained the [Azure Data Engineer Associate certification](https://learn.microsoft.com/en-us/credentials/certifications/azure-data-engineer/)
+  - Exams passed: DP-200, DP-201
+
 #### University of Warwick 
 *2014-2017*
 - BSc Mathematics, Operational Research, Statistics & Economics
@@ -113,13 +118,11 @@ So as a result, I've been lucky enough to represent Great Britain in 14 matches,
 
 
 #### Nerdy stuff
-I enjoy doing some hobby programming when I can find the time.
-I've been looking at this year's advent of code slowly and steadily. You can take a look at my solutions to this year's problems on my [github](https://github.com/jrstats/adventofcode/tree/main/2022) page.
-When I've had a bit more time, I've also created most of a smart mirror in python, set up email notifications whenever [@BrentfordFC](https://twitter.com/BrentfordFC/) (COYB!) [tweet about tickets going on sale](https://github.com/jrstats/twitterNotifications), and [optimised the Formula 1 calendar](https://github.com/jrstats/f1calendar/blob/master/solution.ipynb) to reduce its emissions. Again, feel free to take a look at them on my [github](https://github.com/jrstats) page.
+I enjoy doing some hobby programming, too. I'm currently teaching myself Rust (really interested by learning some more in-depth software engineering practices and a lower-level language with some brilliant and unique features) and JavaScript (not sure I need to justify this one...). 
+When I've had a bit more time, I've also created a [smart mirror](https://github.com/jrstats/pymirror) in python, set up email notifications whenever [@BrentfordFC](https://twitter.com/BrentfordFC/) (COYB!) [tweet about tickets going on sale](https://github.com/jrstats/twitterNotifications), and [optimised the Formula 1 calendar](https://github.com/jrstats/f1calendar/blob/master/solution.ipynb) to reduce its emissions. 
+Again, feel free to take a look at them on my [github](https://github.com/jrstats) page.
 
-
-I'm also a fan of the Linux desktop, currently sporting the latest Fedora release. I love the open-source philosophy, and I'd like to contribute to open-source projects in the future.
-
+I'm also a fan of the Linux desktop, currently sporting the latest Pop_OS! release. I love the open-source philosophy, have contributed to the dagster open-source project, and I'm keen to contribute to more open-source projects in the future.
 
 ## Links 🔗
 - [LinkedIn](https://www.linkedin.com/in/james-robinson-data/)
