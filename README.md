@@ -12,7 +12,7 @@ The fight against climate change is the problem of our generation and I'm motiva
 
 ## Skills 💻
 - Python
-  - dagster - I have also [contributed](https://github.com/dagster-io/dagster/pulls?q=is%3Apr+author%3Ajrstats+) to this open-source project
+  - dagster - I have also [contributed](https://github.com/dagster-io/dagster/pulls?q=is%3Apr+author%3Ajrstats+is%3Amerged) to this open-source project
   - pandas, polars & pyspark
   - flask & fastAPI
 - SQL
