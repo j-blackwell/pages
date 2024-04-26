@@ -86,30 +86,21 @@ Outside of my day-to-day role, I have also, been involved with:
 
 #### Professional Certifications
 *2024*
-- Completed the Grantham Institute's [Clean Power Program](https://www.imperial.ac.uk/grantham/education/online-learning-clean-power-programme/)
+- [Grantham Institute Clean Power Program](https://www.imperial.ac.uk/grantham/education/online-learning-clean-power-programme/)
   - Why Move Towards Cleaner Power
   - Creating a Pro-Renewables Environment
   - Incorporating Renewable Energy in Electricity Grids
 
 *2021*
-- Gained the [Azure Data Engineer Associate certification](https://learn.microsoft.com/en-us/credentials/certifications/azure-data-engineer/)
-  - Exams passed: DP-200, DP-201
+- [Azure Data Engineer Associate certification](https://learn.microsoft.com/en-us/credentials/certifications/azure-data-engineer/)
 
 #### University of Warwick 
 *2014-2017*
-- BSc Mathematics, Operational Research, Statistics & Economics
-  - 2:1 Grade
-  - Took mostly statistics courses
-  - Particular interest in statistical modelling, multivariate statistics, and Bayesian statistics.
-
+- BSc Mathematics, Operational Research, Statistics & Economics (2:1)
 
 #### Aylesbury Grammar School
 *2007-2014*
-- 4x A-Levels
-  - Maths (A*)
-  - Further Maths (A*)
-  - Chemistry (A*)
-  - Economics (A)
+- 4x A-Levels (A\*A\*A\*A)
 - 11x GCSE (A*-B)
 
 ## Hobbies 🥅
