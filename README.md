@@ -2,23 +2,27 @@ Data Engineer at [Ember](https://www.ember-climate.org)
 
 ## Profile 🌍
 
-I'm a data engineer with experience in data science and platform architecture across the water and energy sector.
+I'm a data engineer with experience in data science and platform architecture across the water and energy industries.
 I like building things related to data and hate doing things manually!
 I also like doing things the right way, using best practices and the right tool for the job.
 
 I am passionate about the environment.
 The fight against climate change is the problem of our generation and I'm motivated to use my skills in the most valuable way to combat it.
 
+I am also an active contributor to the [CADA network](https://autonomy.work/cada/).
 
 ## Skills 💻
 - Python
-  - dagster - I have also [contributed](https://github.com/dagster-io/dagster/pulls?q=is%3Apr+author%3Ajrstats+is%3Amerged) to this open-source project
+  - dagster expert - I have also [contributed](https://github.com/dagster-io/dagster/pulls?q=is%3Apr+author%3Ajrstats+is%3Amerged) to the open-source project
   - pandas, polars & pyspark
   - flask & fastAPI
 - SQL
-- Google Cloud Platform
-- Azure platform - Azure Data Engineer Associate certification
-- Databricks
+  - duckdb fan 🦆
+- Cloud platforms
+  - Google Cloud - designed and created a full data platform at Ember using GCP
+  - AWS - designed a duckdb database using parquet files stored on s3
+  - Azure platform - Azure Data Engineer Associate certification
+  - Databricks
 - CI/CD
   - github actions
   - docker
