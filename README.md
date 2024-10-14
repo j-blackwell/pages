@@ -124,8 +124,8 @@ I'm also a fan of the Linux desktop, currently sporting the latest Pop_OS! relea
 
 ## Links 🔗
 - [LinkedIn](https://www.linkedin.com/in/james-robinson-data/)
-- [Email](mailto:james@robinson.fyi)
-- [Github](https://github.com/jrstats)
-- [Website](https://jrstats.github.io)
+- [Email](mailto:james@blackwellmail.co.uk)
+- [Github](https://github.com/j-blackwell)
+- [Website](http://james.blackwellmail.co.uk)
 - [Player Profile - International](https://floorball.sport/player/1539596530/)
 - [Player Profile - UK](https://englishfloorball.leaguerepublic.com/player/781206860.html)
