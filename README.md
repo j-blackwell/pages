@@ -8,7 +8,7 @@ I like building things related to data and hate doing things manually!
 But I also like doing things the right way, using best practices and the right tool for the job.
 
 I am passionate about the environment and other societal issues, and I'm motivated to use my skills in the most 
-valuable way to contribute to society.
+valuable way to contribute towards these causes.
 
 I am also an active contributor to the [CADA network](https://autonomy.work/cada/).
 
@@ -61,6 +61,7 @@ and processing of datasets at a rate and scale that was previously infeasible.
   -  Suggested, designed and developed an [API](https://ember-energy.org/data/api) for our public datasets (2024)
     - Managed the development, databases, deployment, CICD, monitoring (performance and errors)
 
+
 ### [Aiimi](https://aiimi.com)
 *2019-2023*
 
@@ -71,7 +72,7 @@ and processing of datasets at a rate and scale that was previously infeasible.
     - Implemented a module to create a relational data model in Analysis Services using the bespoke data catalogue.
   - Carbon Reporting - Internal
     - Lead initiative and developed methodology to estimate carbon emissions from Azure usage
-    - Gained approval from CEO to run a week-long well-resourced hack to  the calculations into our internal product
+    - Gained approval from CEO to run a week-long well-resourced hack to implement calculations into our internal product
 - Data Consultant (2019-2021)
   - COVID Workforce Management - Utilities
   - Zero Emissions Hack (winner) - Utilities
