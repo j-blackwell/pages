@@ -148,6 +148,7 @@ So as a result, I've been lucky enough to represent Great Britain in 14 matches,
 
 
 ## Links 🔗
+- [Short profile](./portfolio-short.md)
 - [LinkedIn](https://www.linkedin.com/in/james-blackwell-data/)
 - [Email](mailto:james@blackwellmail.co.uk)
 - [Github](https://github.com/j-blackwell)
