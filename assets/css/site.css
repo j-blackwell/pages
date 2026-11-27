@@ -133,14 +133,21 @@ code { font-family: var(--mono); font-size: 0.88em; padding: 0.05em 0.3em; borde
 /* ---------- Timeline ---------- */
 .timeline { margin: 0; }
 .profile .timeline { padding: 2.5rem 0 0.5rem; }
+.timeline { --axis-h: 1.3rem; --move-gap: 2px; --caret: 5px; }
 .tl-bars { position: relative; list-style: none; margin: 0; padding: 0; height: 2.6rem; }
-.tl-bar { position: absolute; left: var(--l); width: var(--w); top: 0; height: 0.8rem; margin: 0; border-radius: 3px; background: var(--accent); box-shadow: 0 0 0 2px var(--surface, var(--bg)); }
+.tl-bar { position: absolute; left: var(--l); width: var(--w); top: 0; height: 0.8rem; margin: 0; border-radius: 3px; background: var(--accent); box-shadow: 0 0 0 var(--move-gap) var(--surface, var(--bg)); }
 .tl-edu { background: var(--rail); }
-.tl-current { background: linear-gradient(90deg, var(--accent) 70%, color-mix(in srgb, var(--accent) 15%, transparent)); }
+/* Jobs: older jobs fade towards grey. A promotion is a caret above the bar in the job's colour;
+   a new company is a gap (--move-gap) and a change of colour. */
+.tl-job { --c: color-mix(in srgb, var(--accent), var(--rail) var(--fade, 0%)); background: none; }
+.tl-roles { position: absolute; inset: 0; border-radius: inherit; overflow: hidden; }
+.tl-role { position: absolute; left: var(--at); width: var(--rw); top: 0; bottom: 0; background: var(--c); cursor: help; }
+.tl-promo { position: absolute; left: var(--at); bottom: 100%; margin-bottom: calc(var(--caret) * 0.5); transform: translateX(-50%); border: var(--caret) solid transparent; border-top: 0; border-bottom-color: var(--c); cursor: help; }
 .tl-label { position: absolute; top: 1.1rem; left: 0; font: 500 0.75rem/1 var(--mono); color: var(--ink); white-space: nowrap; }
-/* a promotion shows as a small gap in the bar */
-.tl-promo { position: absolute; left: var(--at); top: 0; width: 2px; height: 100%; transform: translateX(-50%); background: var(--surface, var(--bg)); cursor: help; }
-.tl-axis { position: relative; list-style: none; margin: 0; padding: 0; height: 1.3rem; border-top: 1px solid var(--line); }
+/* today, at the end of the timeline: a dotted line through the bars and the axis */
+.tl-now { position: absolute; right: 0; top: -0.5rem; bottom: calc(-1 * var(--axis-h)); margin: 0; border-right: 1.5px dotted var(--ink); }
+.tl-now span { position: absolute; bottom: 100%; right: 0; transform: translateX(50%); padding-bottom: 0.15rem; font: 500 0.62rem/1 var(--mono); color: var(--muted); }
+.tl-axis { position: relative; list-style: none; margin: 0; padding: 0; height: var(--axis-h); border-top: 1px solid var(--line); }
 .tl-axis li { position: absolute; left: var(--l); top: 0; margin: 0; padding: 0.3rem 0 0 4px; border-left: 1px solid var(--line); font: 400 0.68rem/1 var(--mono); color: var(--muted); }
 
 @media (max-width: 46rem) {
@@ -173,12 +180,12 @@ code { font-family: var(--mono); font-size: 0.88em; padding: 0.05em 0.3em; borde
 .cv .contact { flex-direction: column; align-items: flex-end; gap: 0; margin: 0; font-size: 7.6pt; line-height: 1.6; }
 .cv .content { padding-bottom: 5mm; }
 
-.cv .timeline { padding: 4mm 0 1.5mm; }
+.cv .timeline { --axis-h: 3.5mm; --move-gap: 0.5mm; --caret: 1.3mm; padding: 4mm 0 1.5mm; }
 .cv .tl-bars { height: 7mm; }
-.cv .tl-bar { height: 2.2mm; border-radius: 0.6mm; box-shadow: 0 0 0 0.5mm var(--sheet); }
-.cv .tl-promo { width: 0.6mm; }
+.cv .tl-bar { height: 2.2mm; border-radius: 0.6mm; }
+.cv .tl-now { top: -1.2mm; border-right-width: 0.35mm; }
+.cv .tl-now span { font-size: 5.6pt; padding-bottom: 0.3mm; }
 .cv .tl-label { top: 3.1mm; font-size: 6.8pt; }
-.cv .tl-axis { height: 3.5mm; }
 .cv .tl-axis li { font-size: 6pt; padding: 0.6mm 0 0 1mm; }
 
 .cv .section { grid-template-columns: 24mm 1fr; gap: 0 5mm; padding: 2.4mm 0; }
