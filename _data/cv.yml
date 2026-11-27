@@ -201,6 +201,9 @@ floorball: |
   So as a result, I've been lucky enough to represent Great Britain in 14 matches, scoring 4 goals in this
   time, but I think my team GB days are behind me now.
 
+# Full profile only: shown in the page footer.
+disclaimer: All content written by me. Styling is written with a coding agent (I am not a front-end dev).
+
 # Contact links shown in the page header.
 # `cv: true` also shows the link on the CV, using `label` (readable when printed).
 # `profile: false` hides it on the full profile.

@@ -78,7 +78,10 @@ li::marker { color: var(--muted); }
 .profile-text p:last-child { margin-bottom: 0; }
 .profile .contact { margin: 1.25rem 0 0; }
 
-.profile main { padding-bottom: 5rem; }
+.profile main { padding-bottom: 0; }
+.site-footer { padding: 1.25rem 0 3rem; border-top: 1px solid var(--line); font-size: 0.85rem; color: var(--muted); }
+.site-footer p { margin: 0; }
+.site-footer a { color: inherit; }
 .section { display: grid; grid-template-columns: var(--label-col) 1fr; gap: 1rem 2.5rem; padding: 2.5rem 0; border-bottom: 1px solid var(--line); }
 .section:last-child { border-bottom: 0; }
 .section > h2 { margin: 0.1rem 0 0; font-size: 1.2rem; font-weight: 700; }

@@ -8,7 +8,7 @@ All content lives in one file, [`_data/cv.yml`](_data/cv.yml). Two pages render 
 
 | Page | Template | Shows |
 | --- | --- | --- |
-| `/` (full profile) | `index.html` | everything: profile, `summary` and `details` fields, certifications, floorball, links |
+| `/` (full profile) | `index.html` | everything: profile, `summary` and `details` fields, certifications, floorball, links, footer disclaimer |
 | `/portfolio-short.html` (one-page CV) | `portfolio-short.html` | skills, experience, projects and education `summary` fields only |
 
 | File | Purpose |
