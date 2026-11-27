@@ -61,10 +61,10 @@ experience:
     url: https://ember-energy.org
     roles:
       - title: Data Engineer
-        start: 2023
-        end: 2024
+        start: 2023-03
+        end: 2024-08
       - title: Senior Data Engineer
-        start: 2024
+        start: 2024-08
     summary: |
       - Own engineering workstreams at Ember including:
         - Ember's data orchestration platform in dagster
@@ -100,11 +100,11 @@ experience:
     compact: true
     roles:
       - title: Data Consultant
-        start: 2019
-        end: 2021
+        start: 2019-06
+        end: 2021-03
       - title: Senior Data Engineer
-        start: 2021
-        end: 2023
+        start: 2021-03
+        end: 2023-03
     summary: |
       - Migrated and modernised ETL pipelines. Developed a testing framework to improve data quality.
       - Lead initiative and developed methodology to estimate internal carbon emissions from Azure usage.
@@ -128,8 +128,8 @@ experience:
     compact: true
     roles:
       - title: Junior Data Scientist
-        start: 2018
-        end: 2019
+        start: 2018-03
+        end: 2019-06
     summary: |
       - Projects include: web-scraping analytics; automating econometric modelling.
     details: |
@@ -139,13 +139,13 @@ education:
   - name: University of Warwick
     label: Warwick
     summary: BSc [MORSE](https://warwick.ac.uk/study/undergraduate/courses/bsc-morse/) - Grade 2:1
-    start: 2014
-    end: 2017
+    start: 2014-09
+    end: 2017-07
   - name: Aylesbury Grammar School
     timeline: false
     summary: 4x A-Levels (A\*A\*A\*A) - 11x GCSE (A\*-B)
-    start: 2007
-    end: 2014
+    start: 2007-09
+    end: 2014-07
 
 # Full profile only
 certifications:
