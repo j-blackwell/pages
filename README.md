@@ -2,13 +2,13 @@ Senior Data Engineer at [Ember](https://www.ember-energy.org)
 
 ## Profile 🌍
 
-I'm a python software engineer with experience in data science, data engineering and platform architecture
+I'm a python backend and data engineer with experience in data science, data engineering and platform architecture
 mainly in the water and energy industry.
 I like building things related to data and hate doing things manually!
 But I also like doing things the right way, using best practices and the right tool for the job.
 
-I am passionate about the environment and other societal issues, and I'm motivated to use my skills in the most 
-valuable way to contribute towards these causes.
+I am passionate about the environment and other societal issues, and I'm motivated to use my skills in the most
+valuable way to tackle these issues.
 
 I am also an active contributor to the [CADA network](https://autonomy.work/cada/).
 
@@ -43,7 +43,8 @@ and [dagster-ibis](https://github.com/ember-energy/dagster-ibis).
   - Line managing front-end developer and AI intern (2024-present)
     - Supporting their development and providing guidance or steering to their projects
       - Provided data and feedback on the [Electricity Data Explorer](https://ember-energy.org/data/electricity-data-explorer/)
-      - Project managed the development of a PDF AI data extraction tool, shifting focus depending on results, feedback
+      - Project managed the development of a PDF AI data extraction tool, providing direction depending on results, feedback
+  - Contributing to team strategy, organisation-wide AI strategy and data protection policy.
 and feasibility.
   - Running an organisation-wide pilot program of AI tooling. (2025)
   - Contributing towards organisation AI strategy. (2025)
