@@ -18,31 +18,29 @@ profile: |
   I am passionate about the environment and other societal issues, and I'm motivated to use my skills
   in the most valuable way to contribute towards these causes.
 
-  I am also an active contributor to the [CADA network](https://autonomy.work/cada/).
-
 # `since` is when you started: a year (2017) or year-month (2017-09).
 # Years of experience are calculated from it each time the site is built.
 skills:
   - name: python
     since: 2017
-    summary: "Favourite libraries / tools: `dagster`, `polars`, `fastAPI`, `uv`."
+    summary: "Favourite libraries / tools: `dagster`, `polars`, `fastapi`, `uv`."
     details: |
       - `dagster` expert - see [experience](#experience) for open-source contributions and plugins
       - `pandas`, `polars` & `pyspark`
-      - `flask` & `fastAPI`
+      - `fastapi` & `fastmcp`
   - name: SQL
     since: 2016
-    summary: "Favourite databases: `duckdb`, bigquery."
+    summary: "Favourite databases: `duckdb`, BigQuery."
     details: |
       - `duckdb` fan 🦆
-      - Worked with bigquery, `duckdb`, mysql, sqlite
+      - Worked with BigQuery, `duckdb`, MySQL, SQLite
   - name: Cloud platforms
     since: 2020
     summary: >-
       Have designed solutions on GCP, Azure and AWS.
-      Favourite services: bigquery and google cloud run.
+      Favourite services: BigQuery and Google Cloud Run.
     details: |
-      - Google Cloud - designed and created a full data platform at Ember using GCP (bigquery, cloud run, datastore, gcs)
+      - Google Cloud - designed and created a full data platform at Ember using GCP (BigQuery, Cloud Run, Datastore, GCS)
       - AWS - designed a `duckdb` database using parquet files stored on s3
       - Azure - Azure Data Engineer Associate certification
       - Databricks
@@ -52,6 +50,9 @@ skills:
   - name: CI/CD
     since: 2022
     summary: "Including docker, infrastructure as code and github actions."
+  - name: Linux
+    since: 2020
+    summary: "Linux desktop user, at home in the command line. Currently using EndeavourOS."
 
 # Dates (`start`, `end`, `since`) accept a year (2019), year-month (2019-09) or full date.
 # Leave out `end` for a current role. Pages show years; the timeline uses months when given.
@@ -87,13 +88,6 @@ experience:
         - Project manage projects including planning and managing team resource.
         - Qualified Mental Health First Aider and member of wellbeing working group.
       - Contributed to organisation AI and data team strategies, and supported funding applications.
-    details: |
-      - Project managed the migration from our legacy codebase to the `dagster` platform (2025).
-      - Running production data pipelines on schedules / sensors since early 2024, processing datasets at a
-        rate and scale that was previously infeasible.
-      - Moved our database to bigquery to help future-proof and enable reporting of finer-grain datasets.
-      - Provided data and feedback on the [Electricity Data Explorer](https://ember-energy.org/data/electricity-data-explorer/).
-      - Ran an organisation-wide pilot program of AI tooling (2025).
 
   - org: Aiimi
     url: https://aiimi.com
@@ -110,17 +104,8 @@ experience:
       - Lead initiative and developed methodology to estimate internal carbon emissions from Azure usage.
       - Other roles include: 'data community' leader; career shift mentor; apprentice mentor.
     details: |
-      - Platform migration (utilities) - migrated ETL pipelines from an on-premise data warehouse to a
-        bespoke databricks-based cloud platform. The testing framework became part of the platform.
-      - Implemented a module to create a relational data model in Analysis Services using the bespoke data catalogue.
-      - Gained approval from the CEO to run a week-long hack to implement the carbon calculations into our
-        internal product.
       - Other projects: COVID workforce management; Zero Emissions Hack (winner); utility demand modelling;
         asset condition modelling; document classification.
-      - 'Data community' leader - developing resources and creating a space for data consultants to connect
-        and share ideas, lessons learned and best practices.
-      - Career shift mentor - helped a scrum master transition to data engineering by focusing their training.
-      - Apprentice mentor - helped an 18 year old data science apprentice transition from school into work.
 
   - org: Havas Media Group
     label: Havas  # shorter name for the timeline
@@ -132,8 +117,6 @@ experience:
         end: 2019-06
     summary: |
       - Projects include: web-scraping analytics; automating econometric modelling.
-    details: |
-      - Developed an R-Shiny app for conducting econometric analysis.
 
 # Unpaid dev work: open source, community and hobby projects.
 # `since` (and `end`) are optional; with `since` the entry shows e.g. "2024–present".
@@ -141,28 +124,38 @@ experience:
 projects:
   - name: CADA network
     url: https://autonomy.work/cada/
-    summary: Active contributor to the CADA network.
-  - name: Hobby programming
-    url: https://github.com/jrstats
-    summary: >-
-      Open-source python packages on pypi, plus side projects in python, Rust and JavaScript.
+    summary: Former contributor to the CADA network.
     details: |
-      I enjoy doing some hobby programming, too, and I love the open-source philosophy.
-      As well as my contribution to the `dagster` open-source ecosystem, I have a couple of other projects on pypi.
-      My main project at the moment is [`ipydata`](), an intuitive tool to load / operate on datasets within
-      databases or blob storage within notebooks or `ipython` sessions.
-
-      I have dabbled in Rust and JavaScript and would welcome any opportunities to work with some non-python
+      Previously, I have been a very active member of the CADA network, where I helped design and build
+      a dataset of council spending data in order to assess the impact of outsourcing and consultancy
+      on local government spending. Inspired by [Mariana Mazzucato and Rosie Collington](https://en.wikipedia.org/wiki/The_Big_Con_(Mazzucato_and_Collington_book)),
+      we wrote a paper called the [London Big Con](https://autonomy.work/portfolio/the-london-big-con/)
+      which was picked up by the [Guardian](https://www.theguardian.com/society/2025/dec/06/london-councils-warning-structurally-dependent-on-private-firms-as-report-shows-500m-spend).
+  - name: Open source
+    summary: >-
+      The open-source philosophy is something incredibly valuable and something like it is rare in the modern world.
+      I don't contribute to it as much as I would like. However, I have contributed to the `dagster`
+      open-source ecosystem, and have a couple of other projects on pypi.
+  - name: Hobby programming
+    url: https://github.com/j-blackwell
+    summary: >-
+      I have also played around with some toy programming projects, and have learnt a bit of Lua and JavaScript.
+    details: |
+      I have dabbled in Lua and JavaScript and would welcome any opportunities to work with some non-python
       technologies / frameworks.
 
-      When I've had a bit more time, I've also created a [smart mirror](https://github.com/jrstats/pymirror) in
-      python, set up email notifications whenever [@BrentfordFC](https://twitter.com/BrentfordFC/) (COYB!)
-      [tweet about tickets going on sale](https://github.com/jrstats/twitterNotifications), and
-      [optimised the Formula 1 calendar](https://github.com/jrstats/f1calendar/blob/master/solution.ipynb) to
-      reduce its emissions.
-      Again, feel free to take a look at them on my [github](https://github.com/jrstats) page.
-  - name: Linux
-    summary: Linux desktop user, currently running EndeavourOS.
+      I've played around with some toy programming projects:
+        - creating a [smart mirror](https://github.com/jrstats/pymirror) in python
+        - setting up email notifications whenever Brentford FC [tweet about tickets going on sale](https://github.com/jrstats/twitterNotifications)
+        - [optimising the Formula 1 calendar](https://github.com/jrstats/f1calendar/blob/master/solution.ipynb) to
+        reduce its emissions.
+  - name: Hyprland and Neovim
+    summary: Taking advantage of the highly configurable desktop and text editor to customise workflows.
+    details: |
+      I really enjoy customising my desktop environment and text editor, to make using my computer that
+      bit more efficient.
+      I am not an expert in Lua, but know enough to be able to add some great functionality to each
+      with the help of AI.
 
 education:
   - name: University of Warwick
