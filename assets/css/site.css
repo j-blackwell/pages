@@ -89,23 +89,24 @@ li::marker { color: var(--muted); }
 .section h3 { margin: 0; font-size: 1.15rem; font-weight: 700; }
 .section h4 { margin: 1.2rem 0 0.4rem; font: 500 0.75rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
 
-/* Experience: one dot per employer on a vertical line, filled for the current one. */
+/* Experience: one dot per employer on a vertical line, filled for the current one.
+   The dot's top is (employer name line height - dot size) / 2, so it centres on the name. */
 .job { position: relative; padding: 0 0 2.25rem 1.75rem; border-left: 2px solid var(--rail); }
 .job:last-child { padding-bottom: 0.25rem; }
-.job::before { content: ""; position: absolute; left: -0.5rem; top: 0.35rem; width: 0.9rem; height: 0.9rem; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); box-sizing: border-box; }
+.job::before { content: ""; position: absolute; left: -0.5rem; top: calc((1.15rem * 1.62 - 0.9rem) / 2); width: 0.9rem; height: 0.9rem; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); box-sizing: border-box; }
 .job-current::before { background: var(--accent); }
 .job-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0 1rem; }
 .job-org a { color: var(--ink); text-decoration: none; }
 .job-org a:hover { color: var(--accent); }
 .job-roles { flex-basis: 100%; list-style: none; padding: 0; margin: 0.25rem 0 0.9rem; }
-.job-roles li { margin: 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1rem; color: var(--muted); }
+.job-roles li { margin: 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0 1rem; color: var(--muted); }
 .job-roles li:first-child { color: var(--ink); font-weight: 600; }
 
-/* Skills and projects: cards on the full profile, rows on the CV.
-   Skills show years as a bar scaled to the longest-held skill; projects have no bar. */
+/* Skills, projects and certifications: cards on the full profile, rows on the CV.
+   Skills show years as a bar scaled to the longest-held skill; the others have no bar. */
 .skill-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; }
 .profile .skill { padding: 1rem 1.1rem 1.1rem; background: var(--sheet); border: 1px solid var(--line); border-radius: 8px; }
-.profile .project .skill-head { margin-bottom: 0.45rem; }
+.profile .project .skill-head, .profile .cert .skill-head { margin-bottom: 0.45rem; }
 .skill { margin: 0; min-width: 0; font-size: 0.94rem; }
 .skill-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; }
 .skill-name { font-size: 1rem; font-weight: 700; }
@@ -117,7 +118,7 @@ li::marker { color: var(--muted); }
 .skill-body p + p { margin-top: 0.6em; }
 .skill-body a { color: inherit; }
 
-/* Education and certifications */
+/* Education */
 .entry-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.85rem; }
 .entry { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 0 1rem; }
 .entry-main { min-width: 0; }
@@ -187,7 +188,7 @@ li::marker { color: var(--muted); }
 
 .cv .job { padding: 0 0 2.6mm 4.5mm; border-left-width: 0.5mm; }
 .cv .job:last-child { padding-bottom: 0.5mm; }
-.cv .job::before { left: -1.6mm; top: 0.9mm; width: 2.7mm; height: 2.7mm; border-width: 0.5mm; background: var(--sheet); }
+.cv .job::before { left: -1.6mm; top: calc((10pt * 1.42 - 2.7mm) / 2); width: 2.7mm; height: 2.7mm; border-width: 0.5mm; background: var(--sheet); }
 .cv .job-current::before { background: var(--accent); }
 .cv .job-head { flex-wrap: nowrap; gap: 1em; margin-bottom: 0.4mm; }
 .cv .job-org { font-size: 10pt; }

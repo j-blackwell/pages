@@ -6,7 +6,7 @@
 # Sections marked "full profile only" are not shown on the short portfolio.
 # All text fields are Markdown.
 
-tagline: Senior Data Engineer at [Ember](https://ember-energy.org)
+tagline: \> Senior Data Engineer at [Ember](https://ember-energy.org)
 
 # Full profile only
 profile: |
@@ -177,15 +177,23 @@ education:
     end: 2014-07
 
 # Full profile only
+# `url` is optional and links the name; `summary` is optional.
 certifications:
-  - year: 2024
+  - name: Grantham Institute Clean Power Program
+    url: https://www.imperial.ac.uk/grantham/education/online-learning-clean-power-programme/
+    year: 2024
     summary: |
-      [Grantham Institute Clean Power Program](https://www.imperial.ac.uk/grantham/education/online-learning-clean-power-programme/)
+      Modules:
       - Why Move Towards Cleaner Power
       - Creating a Pro-Renewables Environment
       - Incorporating Renewable Energy in Electricity Grids
-  - year: 2021
-    summary: "[Azure Data Engineer Associate certification](https://learn.microsoft.com/en-us/credentials/certifications/azure-data-engineer/)"
+  - name: Azure Data Engineer Associate certification
+    url: https://learn.microsoft.com/en-us/credentials/certifications/azure-data-engineer/
+    year: 2021
+    summary: |
+      Modules:
+      - DP-200: Implementing an Azure Data Solution
+      - DP-201: Designing an Azure Data Solution
 
 # Full profile only
 floorball: |

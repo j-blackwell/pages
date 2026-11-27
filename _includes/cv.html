@@ -115,11 +115,16 @@
     </ul>
     {%- if full and cv.certifications %}
     <h4>Professional certifications</h4>
-    <ul class="entry-list">
+    <ul class="skill-list cert-list">
       {%- for cert in cv.certifications %}
-      <li class="entry">
-        <div class="entry-main">{{ cert.summary | markdownify }}</div>
-        <span class="years">{{ cert.year }}</span>
+      <li class="skill cert">
+        <div class="skill-head">
+          <span class="skill-name">{% if cert.url %}<a href="{{ cert.url }}">{{ cert.name }}</a>{% else %}{{ cert.name }}{% endif %}</span>
+          <span class="skill-years">{{ cert.year }}</span>
+        </div>
+        {%- if cert.summary %}
+        <div class="skill-body">{{ cert.summary | markdownify }}</div>
+        {%- endif %}
       </li>
       {%- endfor %}
     </ul>
