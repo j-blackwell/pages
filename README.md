@@ -19,6 +19,7 @@ All content lives in one file, [`_data/cv.yml`](_data/cv.yml). Two pages render 
 | `_includes/month-index.html`, `date-range.html` | date helpers |
 | `assets/css/site.css` | all styles, including the A4 print layout for the CV |
 | `assets/fonts/` | self-hosted DM Sans and DM Mono (SIL Open Font License) |
+| `favicon.svg`, `favicon.ico`, `apple-touch-icon.png` | "JB" monogram in DM Sans Bold (as paths) on the header green; the ICO (16/32/48px) and 180px touch icon are rendered from the SVG |
 
 ## Editing
 

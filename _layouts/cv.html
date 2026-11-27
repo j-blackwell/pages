@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ site.title }}{% if page.cv %} – CV{% endif %}</title>
   <meta name="description" content="{{ cv.tagline | markdownify | strip_html | strip }}">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="32x32">
+  <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 </head>
 <body class="{% if page.cv %}cv{% else %}profile{% endif %}">
