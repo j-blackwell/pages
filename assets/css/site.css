@@ -1,0 +1,231 @@
+/* Site styles for the full profile (body.profile) and the one-page CV (body.cv).
+   Both open with a forest-green header band, then the career timeline, then the sections.
+   Palette taken from the profile photo: forest green band, denim blue accent.
+   Fonts: DM Sans and DM Mono, self-hosted (assets/fonts, SIL Open Font License). */
+
+@font-face { font-family: "DM Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/dm-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "DM Sans"; font-style: italic; font-weight: 400; font-display: swap; src: url("../fonts/dm-sans-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "DM Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/dm-sans-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "DM Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/dm-sans-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "DM Sans"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/dm-sans-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "DM Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/dm-mono-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "DM Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/dm-mono-latin-500-normal.woff2") format("woff2"); }
+
+/* ---------- Tokens ---------- */
+:root {
+  --bg: #fafbfa;
+  --sheet: #ffffff;         /* the CV's A4 sheet */
+  --ink: #1b201e;
+  --muted: #5e6763;
+  --band: #1f3b2f;          /* forest green header */
+  --on-band: #edf3ee;
+  --on-band-muted: #b8cbbf;
+  --accent: #2f6890;        /* denim blue: links, timeline, current role */
+  --rail: #cfd8d3;
+  --line: #e1e5e2;
+  --sans: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "DM Mono", ui-monospace, Menlo, Consolas, monospace;
+  --label-col: 10rem;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1312;
+    --sheet: #161b19;
+    --ink: #e3e9e5;
+    --muted: #98a49e;
+    --band: #16291f;
+    --on-band: #e6efe8;
+    --on-band-muted: #9fb5a8;
+    --accent: #82b6dc;
+    --rail: #2c3632;
+    --line: #252d29;
+    color-scheme: dark;
+  }
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1rem/1.62 var(--sans); }
+a { color: var(--accent); text-underline-offset: 0.18em; text-decoration-thickness: 1.5px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+p { margin: 0 0 0.8em; }
+ul { margin: 0.3em 0 0.8em; padding-left: 1.15rem; }
+li { margin: 0.25em 0; }
+li > ul { margin: 0.15em 0 0.3em; }
+li::marker { color: var(--muted); }
+.years, .skill-years { font: 400 0.8rem/1.4 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+/* `backticks` in cv.yml: library and tool names */
+code { font-family: var(--mono); font-size: 0.88em; padding: 0.05em 0.3em; border-radius: 0.25em; background: color-mix(in srgb, var(--accent) 10%, transparent); white-space: nowrap; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* ---------- Header band ---------- */
+.masthead { background: var(--band); color: var(--on-band); }
+.masthead a { color: var(--on-band); text-decoration-color: var(--on-band-muted); }
+.masthead h1 { margin: 0; font-weight: 700; line-height: 1.05; letter-spacing: -0.025em; }
+.tagline { margin: 0; color: var(--on-band-muted); }
+.contact { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; font: 500 0.85rem/1.4 var(--mono); }
+.contact li { margin: 0; }
+
+/* ---------- Full profile ---------- */
+.profile .masthead { padding: 3.5rem 0 3rem; }
+.profile .masthead-inner, .profile .content { max-width: 62rem; margin: 0 auto; padding: 0 1.5rem; }
+.profile .masthead-inner { display: grid; grid-template-columns: auto 1fr; gap: 0 2.5rem; align-items: start; }
+.profile .photo { grid-row: 1 / 3; width: 9rem; height: 9rem; border-radius: 50%; object-fit: cover; border: 3px solid var(--on-band); }
+.profile .masthead-text, .profile .contact { grid-column: 2; }
+.profile .masthead h1 { font-size: clamp(2.2rem, 5.5vw, 3.2rem); margin-top: 0.4rem; }
+.profile .tagline { font-size: 1.15rem; margin: 0.35rem 0 1.25rem; }
+.profile-text { max-width: 40rem; }
+.profile-text p:last-child { margin-bottom: 0; }
+.profile .contact { margin: 1.25rem 0 0; }
+
+.profile main { padding-bottom: 0; }
+.site-footer { padding: 1.25rem 0 3rem; border-top: 1px solid var(--line); font-size: 0.85rem; color: var(--muted); }
+.site-footer p { margin: 0; }
+.site-footer a { color: inherit; }
+.section { display: grid; grid-template-columns: var(--label-col) 1fr; gap: 1rem 2.5rem; padding: 2.5rem 0; border-bottom: 1px solid var(--line); }
+.section:last-child { border-bottom: 0; }
+.section > h2 { margin: 0.1rem 0 0; font-size: 1.2rem; font-weight: 700; }
+.section-body { min-width: 0; }
+.section h3 { margin: 0; font-size: 1.15rem; font-weight: 700; }
+.section h4 { margin: 1.2rem 0 0.4rem; font: 500 0.75rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+
+/* Experience: one dot per employer on a vertical line, filled for the current one.
+   The dot's top is (employer name line height - dot size) / 2, so it centres on the name. */
+.job { position: relative; padding: 0 0 2.25rem 1.75rem; border-left: 2px solid var(--rail); }
+.job:last-child { padding-bottom: 0.25rem; }
+.job::before { content: ""; position: absolute; left: -0.5rem; top: calc((1.15rem * 1.62 - 0.9rem) / 2); width: 0.9rem; height: 0.9rem; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); box-sizing: border-box; }
+.job-current::before { background: var(--accent); }
+.job-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0 1rem; }
+.job-org a { color: var(--ink); text-decoration: none; }
+.job-org a:hover { color: var(--accent); }
+.job-roles { flex-basis: 100%; list-style: none; padding: 0; margin: 0.25rem 0 0.9rem; }
+.job-roles li { margin: 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0 1rem; color: var(--muted); }
+.job-roles li:first-child { color: var(--ink); font-weight: 600; }
+
+/* Skills, projects and certifications: cards on the full profile, rows on the CV.
+   Skills show years as a bar scaled to the longest-held skill; the others have no bar. */
+.skill-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; }
+.profile .skill { padding: 1rem 1.1rem 1.1rem; background: var(--sheet); border: 1px solid var(--line); border-radius: 8px; }
+.profile .project .skill-head, .profile .cert .skill-head { margin-bottom: 0.45rem; }
+.skill { margin: 0; min-width: 0; font-size: 0.94rem; }
+.skill-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; }
+.skill-name { font-size: 1rem; font-weight: 700; }
+.skill-meter { display: block; height: 4px; margin: 0.4rem 0 0.55rem; border-radius: 2px; background: var(--line); }
+.skill-meter i { display: block; height: 100%; border-radius: 2px; background: var(--accent); }
+.skill-body { color: var(--muted); }
+.skill-body p, .skill-body ul { margin: 0; }
+.skill-body > ul { list-style-type: disc; }
+.skill-body p + p { margin-top: 0.6em; }
+.skill-body a { color: inherit; }
+
+/* Education */
+.entry-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.85rem; }
+.entry { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 0 1rem; }
+.entry-main { min-width: 0; }
+.entry-main p, .entry-main ul { margin: 0.1rem 0 0; }
+.entry-name { font-weight: 600; }
+.profile .entry-name { display: block; }
+
+.floorball .section-body p { margin: 0; }
+
+/* ---------- Timeline ---------- */
+.timeline { margin: 0; }
+.profile .timeline { padding: 2.5rem 0 0.5rem; }
+.timeline { --axis-h: 1.3rem; --move-gap: 2px; --caret: 5px; }
+.tl-bars { position: relative; list-style: none; margin: 0; padding: 0; height: 2.6rem; }
+.tl-bar { position: absolute; left: var(--l); width: var(--w); top: 0; height: 0.8rem; margin: 0; border-radius: 3px; background: var(--accent); box-shadow: 0 0 0 var(--move-gap) var(--surface, var(--bg)); }
+.tl-edu { background: var(--rail); }
+/* Jobs: older jobs fade towards grey. A promotion is a caret above the bar in the job's colour;
+   a new company is a gap (--move-gap) and a change of colour. */
+.tl-job { --c: color-mix(in srgb, var(--accent), var(--rail) var(--fade, 0%)); background: none; }
+.tl-roles { position: absolute; inset: 0; border-radius: inherit; overflow: hidden; }
+.tl-role { position: absolute; left: var(--at); width: var(--rw); top: 0; bottom: 0; background: var(--c); cursor: help; }
+.tl-promo { position: absolute; left: var(--at); bottom: 100%; margin-bottom: calc(var(--caret) * 0.5); transform: translateX(-50%); border: var(--caret) solid transparent; border-top: 0; border-bottom-color: var(--c); cursor: help; }
+.tl-label { position: absolute; top: 1.1rem; left: 0; font: 500 0.75rem/1 var(--mono); color: var(--ink); white-space: nowrap; }
+/* today, at the end of the timeline: a dotted line through the bars and the axis */
+.tl-now { position: absolute; right: 0; top: -0.5rem; bottom: calc(-1 * var(--axis-h)); margin: 0; border-right: 1.5px dotted var(--ink); }
+.tl-now span { position: absolute; bottom: 100%; right: 0; transform: translateX(50%); padding-bottom: 0.15rem; font: 500 0.62rem/1 var(--mono); color: var(--muted); }
+.tl-axis { position: relative; list-style: none; margin: 0; padding: 0; height: var(--axis-h); border-top: 1px solid var(--line); }
+.tl-axis li { position: absolute; left: var(--l); top: 0; margin: 0; padding: 0.3rem 0 0 4px; border-left: 1px solid var(--line); font: 400 0.68rem/1 var(--mono); color: var(--muted); }
+
+@media (max-width: 46rem) {
+  .profile .masthead { padding: 2.25rem 0 2.5rem; }
+  .profile .masthead-inner, .profile .content { padding: 0 1rem; }
+  .profile .masthead-inner, .section { grid-template-columns: 1fr; }
+  .profile .photo { grid-row: auto; width: 6rem; height: 6rem; }
+  .profile .masthead-text, .profile .contact { grid-column: 1; }
+  .entry { grid-template-columns: 1fr; }
+  .tl-axis li:nth-child(even) { visibility: hidden; }
+}
+
+/* ---------- CV (short portfolio, one A4 page) ---------- */
+.cv { --surface: var(--sheet); }
+.cv .page {
+  width: 210mm;
+  max-width: 100%;
+  min-height: 297mm;
+  margin: 1.5rem auto;
+  background: var(--sheet);
+  box-shadow: 0 0 0 1px var(--line);
+  font-size: 9pt;
+  line-height: 1.42;
+}
+.cv .masthead { padding: 7mm 0 5.5mm; }
+.cv .masthead-inner, .cv .content { padding: 0 15mm; }
+.cv .masthead-inner { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 6mm; }
+.cv .masthead h1 { font-size: 24pt; }
+.cv .tagline { font-size: 10.5pt; margin-top: 1.2mm; }
+.cv .contact { flex-direction: column; align-items: flex-end; gap: 0; margin: 0; font-size: 7.6pt; line-height: 1.6; }
+.cv .content { padding-bottom: 5mm; }
+
+.cv .timeline { --axis-h: 3.5mm; --move-gap: 0.5mm; --caret: 1.3mm; padding: 4mm 0 1.5mm; }
+.cv .tl-bars { height: 7mm; }
+.cv .tl-bar { height: 2.2mm; border-radius: 0.6mm; }
+.cv .tl-now { top: -1.2mm; border-right-width: 0.35mm; }
+.cv .tl-now span { font-size: 5.6pt; padding-bottom: 0.3mm; }
+.cv .tl-label { top: 3.1mm; font-size: 6.8pt; }
+.cv .tl-axis li { font-size: 6pt; padding: 0.6mm 0 0 1mm; }
+
+.cv .section { grid-template-columns: 24mm 1fr; gap: 0 5mm; padding: 2.4mm 0; }
+.cv .section > h2 { font-size: 9.5pt; margin: 0; }
+.cv ul { margin: 0.4mm 0; padding-left: 1em; }
+.cv li { margin: 0.2mm 0; }
+.cv p { margin: 0; }
+.cv .years, .cv .skill-years { font-size: 7.4pt; }
+
+.cv .job { padding: 0 0 2mm 4.5mm; border-left-width: 0.5mm; }
+.cv .job:last-child { padding-bottom: 0.5mm; }
+.cv .job::before { left: -1.6mm; top: calc((10pt * 1.42 - 2.7mm) / 2); width: 2.7mm; height: 2.7mm; border-width: 0.5mm; background: var(--sheet); }
+.cv .job-current::before { background: var(--accent); }
+.cv .job-head { flex-wrap: nowrap; gap: 1em; margin-bottom: 0.4mm; }
+.cv .job-org { font-size: 10pt; }
+.cv .job-years { display: none; }
+.cv .job-roles { flex-basis: auto; display: flex; gap: 0 1.3em; margin: 0; }
+.cv .job-roles li { gap: 0.5em; }
+
+.cv .skill-list { grid-template-columns: 1fr; gap: 0.6mm; }
+.cv .skill { display: grid; grid-template-columns: 28mm 10mm 1fr; column-gap: 2mm; align-items: baseline; font-size: inherit; }
+.cv .skill-head { display: contents; }
+.cv .skill-name { font-size: inherit; }
+.cv .skill-meter { display: none; }
+.cv .skill-body { color: var(--ink); }
+/* project rows line up with skill rows; the years column is too narrow for a date range, so it goes at the end */
+.cv .project { grid-template-columns: 28mm 10mm 1fr auto; }
+.cv .project .skill-name { grid-column: 1 / 3; }
+.cv .project .skill-body { grid-column: 3; grid-row: 1; }
+.cv .project .skill-years { grid-column: 4; grid-row: 1; }
+
+.cv .entry-list { gap: 0.6mm; }
+.cv .entry-name { margin-right: 0.4em; }
+
+/* ---------- Print ---------- */
+@page { size: A4; margin: 0; }
+@media print {
+  :root { --bg: #fff; --sheet: #fff; --ink: #1b201e; --muted: #5e6763; --band: #1f3b2f; --on-band: #edf3ee; --on-band-muted: #b8cbbf; --accent: #2f6890; --rail: #cfd8d3; --line: #e1e5e2; color-scheme: light; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .cv .page { margin: 0; box-shadow: none; min-height: 0; }
+  .cv a { text-decoration: none; }
+  .profile .job, .profile .skill { break-inside: avoid; }
+}

@@ -1,0 +1,133 @@
+{%- comment -%}
+  Renders skills, experience, projects and education from _data/cv.yml.
+  Usage: {% include cv.html full=true %}  (full profile; omit `full` for the CV)
+{%- endcomment -%}
+{%- assign cv = site.data.cv -%}
+{%- assign full = include.full -%}
+
+{%- comment -%} Years per skill, and the most of any skill, which sets the scale of the bars. {%- endcomment -%}
+{%- include month-index.html %}{% assign now_index = month_index %}
+{%- assign max_yrs = 1 %}
+{%- for skill in cv.skills %}
+  {%- if skill.since %}
+    {%- include month-index.html date=skill.since %}
+    {%- assign yrs = now_index | minus: month_index | divided_by: 12 %}
+    {%- if yrs > max_yrs %}{% assign max_yrs = yrs %}{% endif %}
+  {%- endif %}
+{%- endfor %}
+
+<section id="skills" class="section skills">
+  <h2>Skills</h2>
+  <div class="section-body">
+    <ul class="skill-list">
+    {%- for skill in cv.skills %}
+      <li class="skill">
+        <div class="skill-head">
+          <span class="skill-name">{{ skill.name }}</span>
+          {%- if skill.since %}
+            {%- include month-index.html date=skill.since %}
+            {%- assign yrs = now_index | minus: month_index | divided_by: 12 %}
+          <span class="skill-years">{{ yrs }} {% if yrs == 1 %}yr{% else %}yrs{% endif %}</span>
+          {%- endif %}
+        </div>
+        {%- if skill.since %}
+        <span class="skill-meter" aria-hidden="true"><i style="width: {{ yrs | times: 100.0 | divided_by: max_yrs | round: 1 }}%"></i></span>
+        {%- endif %}
+        {%- if full and skill.details %}
+        <div class="skill-body">{{ skill.details | markdownify }}</div>
+        {%- else %}
+        <div class="skill-body">{{ skill.summary | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+        {%- endif %}
+      </li>
+    {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section id="experience" class="section experience">
+  <h2>Experience</h2>
+  <div class="section-body">
+  {%- for job in cv.experience %}
+    {%- assign compact = false %}
+    {%- if job.compact and full != true %}{% assign compact = true %}{% endif %}
+    {%- assign current = false %}
+    {%- unless job.roles.last.end %}{% assign current = true %}{% endunless %}
+    <article class="job{% if compact %} job-compact{% endif %}{% if current %} job-current{% endif %}">
+      <header class="job-head">
+        <h3 class="job-org"><a href="{{ job.url }}">{{ job.org }}</a></h3>
+        <span class="years job-years">{% include date-range.html start=job.roles.first.start end=job.roles.last.end %}</span>
+        <ul class="job-roles">
+        {%- for role in job.roles reversed %}
+          <li><span class="role-title">{{ role.title }}</span> <span class="years">{% include date-range.html start=role.start end=role.end %}</span></li>
+        {%- endfor %}
+        </ul>
+      </header>
+      <div class="job-body">
+        {{ job.summary | markdownify }}
+        {%- if full and job.details %}
+        <h4>Additional details</h4>
+        {{ job.details | markdownify }}
+        {%- endif %}
+      </div>
+    </article>
+  {%- endfor %}
+  </div>
+</section>
+
+{%- comment -%} Projects reuse the skill card layout, without the years bar. {%- endcomment -%}
+<section id="projects" class="section projects">
+  <h2>Projects</h2>
+  <div class="section-body">
+    <ul class="skill-list project-list">
+    {%- for project in cv.projects %}
+      <li class="skill project">
+        <div class="skill-head">
+          <span class="skill-name">{% if project.url %}<a href="{{ project.url }}">{{ project.name }}</a>{% else %}{{ project.name }}{% endif %}</span>
+          {%- if project.since %}
+          <span class="skill-years">{% include date-range.html start=project.since end=project.end %}</span>
+          {%- endif %}
+        </div>
+        {%- if full and project.details %}
+        <div class="skill-body">{{ project.details | markdownify }}</div>
+        {%- else %}
+        <div class="skill-body">{{ project.summary | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+        {%- endif %}
+      </li>
+    {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section id="education" class="section education">
+  <h2>Education</h2>
+  <div class="section-body">
+    <ul class="entry-list">
+    {%- for school in cv.education %}
+      <li class="entry">
+        <div class="entry-main">
+          <span class="entry-name">{{ school.name }}</span>
+          <span class="entry-body">{{ school.summary | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>
+          {%- if full and school.details %}{{ school.details | markdownify }}{% endif %}
+        </div>
+        <span class="years">{% include date-range.html start=school.start end=school.end %}</span>
+      </li>
+    {%- endfor %}
+    </ul>
+    {%- if full and cv.certifications %}
+    <h4>Professional certifications</h4>
+    <ul class="skill-list cert-list">
+      {%- for cert in cv.certifications %}
+      <li class="skill cert">
+        <div class="skill-head">
+          <span class="skill-name">{% if cert.url %}<a href="{{ cert.url }}">{{ cert.name }}</a>{% else %}{{ cert.name }}{% endif %}</span>
+          <span class="skill-years">{{ cert.year }}</span>
+        </div>
+        {%- if cert.summary %}
+        <div class="skill-body">{{ cert.summary | markdownify }}</div>
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </div>
+</section>

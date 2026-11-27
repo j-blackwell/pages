@@ -1,4 +1,6 @@
-theme: jekyll-theme-tactile
 title: James Blackwell
+photo: /profile-pic-square.png
 
-logo: ./profile-pic-square.png
+exclude:
+  - README.md
+  - build.sh

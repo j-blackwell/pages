@@ -1,0 +1,12 @@
+---
+layout: cv
+---
+{%- assign cv = site.data.cv -%}
+{% include cv.html full=true %}
+
+<section id="floorball" class="section floorball">
+  <h2>Floorball</h2>
+  <div class="section-body">
+    {{ cv.floorball | markdownify }}
+  </div>
+</section>

@@ -1,0 +1,237 @@
+# Single source of content for both pages:
+#   /                      full profile     (index.html)
+#   /portfolio-short.html  short portfolio  (portfolio-short.html)
+#
+# `summary` fields appear on both pages; `details` fields only on the full profile.
+# Sections marked "full profile only" are not shown on the short portfolio.
+# All text fields are Markdown.
+
+tagline: \> Senior Data Engineer at [Ember](https://ember-energy.org)
+
+# Full profile only
+profile: |
+  I'm a python software engineer with experience in data science, data engineering and platform
+  architecture mainly in the water and energy industry.
+  I like building things related to data and hate doing things manually!
+  But I also like doing things the right way, using best practices and the right tool for the job.
+
+  I am passionate about the environment and other societal issues, and I'm motivated to use my skills
+  in the most valuable way to contribute towards these causes.
+
+# `since` is when you started: a year (2017) or year-month (2017-09).
+# Years of experience are calculated from it each time the site is built.
+skills:
+  - name: python
+    since: 2017
+    summary: "Favourite libraries / tools: `dagster`, `polars`, `fastapi`, `uv`."
+    details: |
+      - `dagster` expert - see [experience](#experience) for open-source contributions and plugins
+      - `pandas`, `polars` & `pyspark`
+      - `fastapi` & `fastmcp`
+  - name: SQL
+    since: 2016
+    summary: "Favourite databases: `duckdb`, BigQuery."
+    details: |
+      - `duckdb` fan 🦆
+      - Worked with BigQuery, `duckdb`, MySQL, SQLite
+  - name: Cloud platforms
+    since: 2020
+    summary: >-
+      Have designed solutions on GCP, Azure and AWS.
+      Favourite services: BigQuery and Google Cloud Run.
+    details: |
+      - Google Cloud - designed and created a full data platform at Ember using GCP (BigQuery, Cloud Run, Datastore, GCS)
+      - AWS - designed a `duckdb` database using parquet files stored on s3
+      - Azure - Azure Data Engineer Associate certification
+      - Databricks
+  - name: git
+    since: 2016
+    summary: "[`lazygit`](https://github.com/jesseduffield/lazygit) fan."
+  - name: CI/CD
+    since: 2022
+    summary: "Including docker, infrastructure as code and github actions."
+  - name: Linux
+    since: 2020
+    summary: "Linux desktop user, at home in the command line."
+
+# Dates (`start`, `end`, `since`) accept a year (2019), year-month (2019-09) or full date.
+# Leave out `end` for a current role. Pages show years; the timeline uses months when given.
+# `compact: true` jobs are grouped under "Other" on the short portfolio.
+experience:
+  - org: Ember
+    url: https://ember-energy.org
+    roles:
+      - title: Data Engineer
+        start: 2023-03
+        end: 2024-08
+      - title: Senior Data Engineer
+        start: 2024-08
+    summary: |
+      - Own engineering workstreams at Ember including:
+        - Ember's data orchestration platform in `dagster`
+          - I have also [contributed to the open-source project](https://github.com/dagster-io/dagster/pulls?q=is%3Apr+author%3Aj-blackwell)
+            and developed two open-source plugins [`dagster-db`](https://github.com/j-blackwell/dagster-db)
+            and [`dagster-ibis`](https://github.com/ember-energy/dagster-ibis).
+          - Implemented bespoke and generalised testing and validation of data assets; extensive metadata
+            collection to enable improved data cataloguing; improving team best practices; and onboarding
+            team members onto the `dagster` platform and implementing feedback to improve developer experience.
+        - Data access platforms including an [API](https://ember-energy.org/data/api), public data hub and
+          internal MCP.
+          - Including databases, deployment, CICD, monitoring (performance and errors).
+          - Developed a strong understanding of the opportunities to productionise AI, and where it should
+            not be used (yet?).
+      - Lead a small team of 5 mixed-experience, multi-discipline engineers, providing various levels of
+        support, mentoring and encouragement.
+        - Lead regular forums on knowledge sharing and best practices, embracing and encouraging use of
+          AI workflows once verifying that output is consistently high quality.
+        - Lead recruitment round for role with over 1100 applicants, managing the resultant pressures.
+        - Project manage projects including planning and managing team resource.
+        - Qualified Mental Health First Aider and member of wellbeing working group.
+      - Contributed to organisation AI and data team strategies, and supported funding applications.
+
+  - org: Aiimi
+    url: https://aiimi.com
+    compact: true
+    roles:
+      - title: Data Consultant
+        start: 2019-06
+        end: 2021-03
+      - title: Senior Data Engineer
+        start: 2021-03
+        end: 2023-03
+    summary: |
+      - Migrated and modernised ETL pipelines. Developed a testing framework to improve data quality.
+      - Lead initiative and developed methodology to estimate internal carbon emissions from Azure usage.
+      - Other roles include: 'data community' leader; career shift mentor; apprentice mentor.
+    details: |
+      - Other projects: COVID workforce management; Zero Emissions Hack (winner); utility demand modelling;
+        asset condition modelling; document classification.
+
+  - org: Havas Media Group
+    label: Havas  # shorter name for the timeline
+    url: https://www.havas.com/
+    compact: true
+    roles:
+      - title: Junior Data Scientist
+        start: 2018-03
+        end: 2019-06
+    summary: |
+      - Projects include: web-scraping analytics; automating econometric modelling.
+
+# Unpaid dev work: open source, community and hobby projects.
+# `since` (and `end`) are optional; with `since` the entry shows e.g. "2024–present".
+# `url` is optional and links the name.
+projects:
+  - name: CADA network
+    url: https://autonomy.work/cada/
+    summary: Former contributor to the CADA network.
+    details: |
+      Previously, I have been a very active member of the CADA network, where I helped design and build
+      a dataset of council spending data in order to assess the impact of outsourcing and consultancy
+      on local government spending. Inspired by [Mariana Mazzucato and Rosie Collington](https://en.wikipedia.org/wiki/The_Big_Con_(Mazzucato_and_Collington_book)),
+      we wrote a paper called the [London Big Con](https://autonomy.work/portfolio/the-london-big-con/)
+      which was picked up by the [Guardian](https://www.theguardian.com/society/2025/dec/06/london-councils-warning-structurally-dependent-on-private-firms-as-report-shows-500m-spend).
+  - name: Open source
+    summary: >-
+      The open-source philosophy is something I value a lot. I have contributed bits to the dagster
+      and python ecosystems.
+    details: |
+      The open-source philosophy is incredibly valuable and something like it is rare in the modern world.
+      I don't contribute to it as much as I would like. However, I have contributed to the `dagster`
+      open-source ecosystem, and have a couple of other projects on pypi.
+  - name: Hobby programming
+    url: https://github.com/j-blackwell
+    summary: >-
+      I have also played around with some toy programming projects, and have learnt a bit of Lua and JavaScript.
+    details: |
+      I have dabbled in Lua and JavaScript and would welcome any opportunities to work with some non-python
+      technologies / frameworks.
+
+      I've played around with some toy programming projects:
+        - creating a [smart mirror](https://github.com/jrstats/pymirror) in python
+        - setting up email notifications whenever Brentford FC [tweet about tickets going on sale](https://github.com/jrstats/twitterNotifications)
+        - [optimising the Formula 1 calendar](https://github.com/jrstats/f1calendar/blob/master/solution.ipynb) to
+        reduce its emissions.
+  - name: Hyprland and Neovim
+    summary: Taking advantage of the highly configurable desktop and text editor to customise workflows.
+    details: |
+      I really enjoy customising my desktop environment and text editor, to make using my computer that
+      bit more efficient.
+      I am not an expert in Lua, but know enough to be able to add some great functionality to each
+      with the help of AI.
+
+education:
+  - name: University of Warwick
+    label: Warwick
+    summary: BSc [MORSE](https://warwick.ac.uk/study/undergraduate/courses/bsc-morse/) - Grade 2:1
+    start: 2014-09
+    end: 2017-07
+  - name: Aylesbury Grammar School
+    timeline: false
+    summary: 4x A-Levels (A\*A\*A\*A) - 11x GCSE (A\*-B)
+    start: 2007-09
+    end: 2014-07
+
+# Full profile only
+# `url` is optional and links the name; `summary` is optional.
+certifications:
+  - name: Grantham Institute Clean Power Program
+    url: https://www.imperial.ac.uk/grantham/education/online-learning-clean-power-programme/
+    year: 2024
+    summary: |
+      Modules:
+      - Why Move Towards Cleaner Power
+      - Creating a Pro-Renewables Environment
+      - Incorporating Renewable Energy in Electricity Grids
+  - name: Azure Data Engineer Associate certification
+    url: https://learn.microsoft.com/en-us/credentials/certifications/azure-data-engineer/
+    year: 2021
+    summary: |
+      Modules:
+      - DP-200: Implementing an Azure Data Solution
+      - DP-201: Designing an Azure Data Solution
+
+# Full profile only
+floorball: |
+  At university I picked up a strange sounding sport when I decided that £600+ for a set of ice hockey gear
+  was too much for a first year student.
+  Cast your mind back to the plastic hockey sticks and balls that you played with in primary school and
+  imagine that someone made this into a real sport -
+  [for example](https://www.youtube.com/watch?v=erB_FWi9-T8).
+  It's not that popular in the UK (and the name isn't helping), but has a great following in
+  north and central Europe.
+  The plus-side of playing a sport that no-one in your country has heard of, is that the pool of players for
+  the national team is very small.
+  So as a result, I've been lucky enough to represent Great Britain in 14 matches, scoring 4 goals in this
+  time, but my team GB days are behind me now.
+
+# Full profile only: shown in the page footer.
+disclaimer: All content written by me. Styling is written with a coding agent (I am not a front-end dev).
+
+# Contact links shown in the page header.
+# `cv: true` also shows the link on the CV, using `label` (readable when printed).
+# `profile: false` hides it on the full profile.
+links:
+  - name: CV
+    url: /portfolio-short.html
+  - name: Email
+    label: james@blackwellmail.co.uk
+    url: mailto:james@blackwellmail.co.uk
+    cv: true
+  - name: LinkedIn
+    label: linkedin.com/in/james-blackwell-data
+    url: https://www.linkedin.com/in/james-blackwell-data/
+    cv: true
+  - name: GitHub
+    label: github.com/j-blackwell
+    url: https://github.com/j-blackwell
+    cv: true
+  - name: Website
+    label: james.blackwellmail.co.uk
+    url: https://james.blackwellmail.co.uk
+    cv: true
+    profile: false
+  - name: Floorball (international)
+    url: https://floorball.sport/player/1539596530/
+  - name: Floorball (UK)
+    url: https://englishfloorball.leaguerepublic.com/player/781206860.html

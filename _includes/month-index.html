@@ -1,0 +1,15 @@
+{%- comment -%}
+  Sets `month_index` (year * 12 + month - 1) and `year` from include.date.
+  Accepts 2019, 2019-09, 2019-09-01, or nothing / "present" (= the build month).
+  Usage: {% include month-index.html date=role.start %}{{ month_index }}
+{%- endcomment -%}
+{%- assign mi_date = include.date | append: '' -%}
+{%- if mi_date == '' or mi_date == 'present' -%}
+  {%- assign year = site.time | date: '%Y' | plus: 0 -%}
+  {%- assign mi_month = site.time | date: '%m' | plus: 0 -%}
+{%- else -%}
+  {%- assign mi_parts = mi_date | split: '-' -%}
+  {%- assign year = mi_parts[0] | plus: 0 -%}
+  {%- assign mi_month = mi_parts[1] | default: 1 | plus: 0 -%}
+{%- endif -%}
+{%- assign month_index = year | times: 12 | plus: mi_month | minus: 1 -%}
