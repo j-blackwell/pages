@@ -52,7 +52,7 @@ skills:
     summary: "Including docker, infrastructure as code and github actions."
   - name: Linux
     since: 2020
-    summary: "Linux desktop user, at home in the command line. Currently using EndeavourOS."
+    summary: "Linux desktop user, at home in the command line."
 
 # Dates (`start`, `end`, `since`) accept a year (2019), year-month (2019-09) or full date.
 # Leave out `end` for a current role. Pages show years; the timeline uses months when given.
@@ -133,7 +133,10 @@ projects:
       which was picked up by the [Guardian](https://www.theguardian.com/society/2025/dec/06/london-councils-warning-structurally-dependent-on-private-firms-as-report-shows-500m-spend).
   - name: Open source
     summary: >-
-      The open-source philosophy is something incredibly valuable and something like it is rare in the modern world.
+      The open-source philosophy is something I value a lot. I have contributed bits to the dagster
+      and python ecosystems.
+    details: |
+      The open-source philosophy is incredibly valuable and something like it is rare in the modern world.
       I don't contribute to it as much as I would like. However, I have contributed to the `dagster`
       open-source ecosystem, and have a couple of other projects on pypi.
   - name: Hobby programming
@@ -192,15 +195,15 @@ certifications:
 floorball: |
   At university I picked up a strange sounding sport when I decided that £600+ for a set of ice hockey gear
   was too much for a first year student.
-  Cast your mind back to the plastic hockey sticks and balls that you played with in junior school and
+  Cast your mind back to the plastic hockey sticks and balls that you played with in primary school and
   imagine that someone made this into a real sport -
-  [dramatic video explanation for anyone who's interested](https://www.youtube.com/watch?v=erB_FWi9-T8).
-  It's not that popular in the UK (and let's face it, the name doesn't help), but has a great following in
+  [for example](https://www.youtube.com/watch?v=erB_FWi9-T8).
+  It's not that popular in the UK (and the name isn't helping), but has a great following in
   north and central Europe.
   The plus-side of playing a sport that no-one in your country has heard of, is that the pool of players for
   the national team is very small.
   So as a result, I've been lucky enough to represent Great Britain in 14 matches, scoring 4 goals in this
-  time, but I think my team GB days are behind me now.
+  time, but my team GB days are behind me now.
 
 # Full profile only: shown in the page footer.
 disclaimer: All content written by me. Styling is written with a coding agent (I am not a front-end dev).
