@@ -1,0 +1,246 @@
+/* Site styles for the full profile (body.profile) and the one-page CV (body.cv).
+   Palette taken from the profile photo: forest green, jacket navy, denim blue, sage.
+   Fonts: IBM Plex Sans and Mono, self-hosted (assets/fonts, SIL Open Font License). */
+
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/ibm-plex-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-style: italic; font-weight: 400; font-display: swap; src: url("../fonts/ibm-plex-sans-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/ibm-plex-sans-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/ibm-plex-sans-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/ibm-plex-mono-latin-600-normal.woff2") format("woff2"); }
+
+/* ---------- Structure ---------- */:root {
+  --bg: #f7f6f3;
+  --surface: var(--bg);
+  --text: #1c1c1c;
+  --muted: #6b6b6b;
+  --accent: #b0431c;
+  --link: #1c1c1c;
+  --rule: #d8d6d0;
+  --sheet: #ffffff;
+  --sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --label-col: 12rem;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 400 1rem/1.55 var(--sans); }
+a { color: var(--link); text-decoration-color: var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 0.18em; }
+a:hover { color: var(--accent); }
+ul { padding-left: 1.1em; margin: 0.3em 0 0.6em; }
+ul li::marker { color: var(--muted); }
+li { margin: 0.15em 0; }
+li > ul { margin: 0.1em 0 0.2em; }
+p { margin: 0 0 0.85em; }
+.years, .skill-years { font-family: var(--mono); font-size: 0.82em; color: var(--muted); white-space: nowrap; letter-spacing: -0.01em; }
+
+/* ---------- Full profile ---------- */
+.profile .page { max-width: 64rem; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
+
+.profile .masthead { display: grid; grid-template-columns: var(--label-col) 1fr; gap: 0 2.5rem; align-items: end; }
+.profile .photo { grid-column: 1; grid-row: 1 / 3; width: 8rem; height: 8rem; object-fit: cover; }
+.profile .masthead-text, .profile .contact { grid-column: 2; }
+.masthead h1 { margin: 0; font-size: clamp(2.4rem, 6vw, 3.8rem); line-height: 0.95; font-weight: 600; letter-spacing: -0.03em; }
+.tagline { margin: 0.7rem 0 0; font-size: 1.15rem; }
+.contact { list-style: none; padding: 0; margin: 1rem 0 0; display: flex; flex-wrap: wrap; gap: 0.2rem 1.4rem; font-family: var(--mono); font-size: 0.85rem; }
+.contact li { margin: 0; }
+
+.section, .profile .timeline { display: grid; grid-template-columns: var(--label-col) 1fr; gap: 0 2.5rem; }
+.section { padding: 2.4rem 0; border-top: 1px solid var(--rule); }
+.section > h2, .timeline figcaption {
+  grid-column: 1;
+  margin: 0.2rem 0 0;
+  font: 600 0.78rem/1.3 var(--sans);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+.profile .section > h2 { position: sticky; top: 1.5rem; align-self: start; }
+.section > :not(h2), .timeline > :not(figcaption) { grid-column: 2; }
+.section > :not(h2) { max-width: 42rem; }
+.section h3 { font-size: 1.15rem; font-weight: 600; margin: 1.4rem 0 0.25rem; }
+.section > h2 + * { margin-top: 0; }
+.section h4 { font: 500 0.75rem var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 1rem 0 0.2rem; }
+
+.skill-list, .entry-list { list-style: none; padding: 0; }
+.profile .skill-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1.2rem 2rem; margin: 0; }
+.profile .skill { margin: 0; }
+.skill-name { font-weight: 600; }
+.skill-years { margin-left: 0.5em; }
+.profile .skill-body { display: block; }
+
+.job + .job { margin-top: 2.2rem; }
+.job-head { margin-bottom: 0.4rem; }
+.job-org { margin: 0 !important; }
+.job-org a { text-decoration: none; }
+.job-roles { list-style: none; padding: 0; margin: 0.1rem 0 0; }
+.job-roles li { margin: 0; display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); }
+.job-roles .role-title { color: var(--text); }
+
+.entry { display: flex; flex-wrap: wrap; gap: 0 0.5em; margin-bottom: 0.45rem; }
+.entry-name { font-weight: 600; }
+.entry .years { margin-left: auto; }
+
+/* ---------- Timeline ---------- */
+.timeline { margin: 0; }
+.profile .timeline { padding: 2rem 0 2.4rem; }
+.tl-bars { position: relative; list-style: none; margin: 0; padding: 0; height: 2.4rem; }
+.tl-bar { position: absolute; left: var(--l); width: var(--w); top: 0; height: 0.6rem; margin: 0; background: var(--accent); box-shadow: inset 3px 0 0 var(--surface); }
+.tl-edu { background: var(--muted); opacity: 0.55; }
+.tl-current { background: linear-gradient(to right, var(--accent) 72%, transparent); }
+.tl-label { position: absolute; top: 0.85rem; left: 3px; font: 500 0.72rem/1 var(--mono); white-space: nowrap; color: var(--text); }
+.tl-promo { position: absolute; left: var(--at); top: 50%; transform: translate(-50%, -50%); padding: 0 0.15em; background: var(--surface); color: var(--accent); font: 600 0.9rem/1 var(--mono); cursor: help; }
+.tl-legend { margin: 0.4rem 0 0; font: 0.68rem/1 var(--mono); color: var(--muted); }
+.tl-promo-key { color: var(--accent); font-weight: 600; }
+.profile .tl-legend { grid-column: 1; grid-row: 2; align-self: start; }
+.tl-axis { position: relative; list-style: none; margin: 0; padding: 0; height: 1.1rem; border-top: 1px solid var(--rule); }
+.tl-axis li { position: absolute; left: var(--l); top: 0; margin: 0; padding: 0.25rem 0 0 3px; border-left: 1px solid var(--rule); font: 0.65rem/1 var(--mono); color: var(--muted); }
+
+@media (max-width: 44rem) {
+  .profile .masthead, .section, .profile .timeline { grid-template-columns: 1fr; }
+  .profile .photo { grid-row: auto; width: 5.5rem; height: 5.5rem; margin-bottom: 1rem; }
+  .profile .masthead-text, .profile .contact, .section > *, .timeline > * { grid-column: 1 !important; }
+  .section > h2, .timeline figcaption { position: static; margin-bottom: 0.8rem; }
+  .tl-axis li:nth-child(even) { visibility: hidden; }
+}
+
+/* ---------- CV (short portfolio) ---------- */
+.cv { --surface: var(--sheet); --label-col: 24mm; }
+.cv .page {
+  width: 210mm;
+  max-width: 100%;
+  min-height: 297mm;
+  margin: 1.5rem auto;
+  padding: 0 15mm 12mm;
+  background: var(--sheet);
+  box-shadow: 0 0 0 1px var(--rule);
+  font-size: 9.2pt;
+  line-height: 1.42;
+}
+.cv .masthead { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; padding: 11mm 0 4mm; }
+.cv .masthead h1 { font-size: 25pt; }
+.cv .tagline { font-size: 10.5pt; margin-top: 1.5mm; }
+.cv .contact { flex-direction: column; align-items: flex-end; gap: 0; margin: 0; font-size: 7.8pt; line-height: 1.55; }
+
+.cv .timeline { padding: 0 0 4mm; }
+.cv .timeline figcaption { display: none; }
+.cv .tl-bars { height: 6.5mm; }
+.cv .tl-bar { height: 2mm; }
+.cv .tl-label { top: 2.8mm; font-size: 6.8pt; }
+.cv .tl-axis { height: 3.5mm; }
+.cv .tl-axis li { font-size: 6pt; padding-top: 0.6mm; }
+
+.cv .section { gap: 0 6mm; padding: 3.4mm 0; }
+.cv .section > h2 { font-size: 7.4pt; margin-top: 0.35em; }
+.cv ul { margin: 0.4mm 0; padding-left: 1em; }
+.cv li { margin: 0.2mm 0; }
+.cv p { margin: 0; }
+.cv .skill-list, .cv .entry-list { padding: 0; margin: 0; }
+.cv .skill-years { margin: 0 0.6em 0 0.4em; }
+
+.cv .job + .job { margin-top: 2.6mm; }
+.cv .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1em; margin-bottom: 0.4mm; }
+.cv .job-org { font-size: 9.8pt; }
+.cv .job-roles { display: flex; gap: 0 1.3em; margin: 0; }
+.cv .job-roles li { gap: 0.5em; }
+.cv .entry { margin: 0; }
+
+/* ---------- Print ---------- */
+@page { size: A4; margin: 0; }
+@media print {
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .cv .page { margin: 0; box-shadow: none; min-height: 0; }
+  .cv a { text-decoration: none; }
+  .profile .page { padding-top: 0; }
+  .profile .job, .profile .skill { break-inside: avoid; }
+  .profile .section > h2 { position: static; }
+}
+
+/* ---------- Look ---------- */
+:root {
+  --bg: #f6f7f2;        /* sage-tinted paper */
+  --text: #1b2230;      /* jacket navy */
+  --muted: #5f6a6a;
+  --accent: #3f6a32;    /* forest green */
+  --meta: #3f6390;      /* denim blue: years, dates */
+  --link: #1b2230;
+  --rule: #d9ddd1;
+  --sheet: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151a22;
+    --text: #e3e6df;
+    --muted: #9aa39f;
+    --accent: #9cc485;
+    --meta: #93b3db;
+    --link: #e3e6df;
+    --rule: #2a313b;
+    --sheet: #1b212b;
+  }
+}
+
+body { counter-reset: section; }
+.masthead h1 { font-family: var(--mono); font-weight: 600; letter-spacing: -0.045em; }
+.tagline { font-family: var(--mono); font-size: 1rem; }
+.tagline::before { content: "> "; color: var(--accent); font-weight: 600; }
+.profile .photo { outline: 1px solid var(--rule); outline-offset: 4px; }
+.profile .masthead { padding-bottom: 1rem; }
+
+.years, .skill-years { color: var(--meta); }
+
+.section { counter-increment: section; border-top: 1px dashed var(--rule); }
+.profile .section:first-child { border-top: 1px solid var(--text); }
+.section > h2, .timeline figcaption { font-family: var(--mono); font-weight: 500; letter-spacing: 0.04em; color: var(--text); }
+.section > h2::before { content: counter(section, decimal-leading-zero) "  "; color: var(--accent); }
+.timeline figcaption::before { content: "00  "; color: var(--accent); }
+
+.job-org { font-family: var(--mono); font-weight: 600; letter-spacing: -0.02em; }
+.section h3 { font-family: var(--mono); letter-spacing: -0.02em; }
+.section h4 { color: var(--meta); }
+main ul li::marker { content: "– "; color: var(--accent); }
+main li > ul > li::marker { content: "· "; }
+
+/* Dot-leader skill rows: name ........ 9 yrs */
+.skill { display: grid; grid-template-columns: auto 1fr auto; align-items: baseline; align-content: start; column-gap: 0.4em; }
+.skill-name { font-family: var(--mono); font-weight: 600; grid-column: 1; }
+.skill::after { content: ""; grid-column: 2; grid-row: 1; border-bottom: 1px dotted var(--muted); transform: translateY(-0.25em); }
+.skill-years { grid-column: 3; grid-row: 1; margin: 0; }
+.skill-body { grid-column: 1 / -1; }
+
+/* Timeline drawn like a git log graph: a line per job, a commit dot where it starts, + at each promotion. */
+.tl-bar { height: 2px; top: 0.3rem; box-shadow: none; }
+.tl-bar::before { content: ""; position: absolute; left: 0; top: 50%; width: 0.65rem; height: 0.65rem; transform: translateY(-50%); border-radius: 50%; background: var(--surface); border: 2px solid var(--accent); box-sizing: border-box; }
+.tl-edu { background: var(--meta); opacity: 1; }
+.tl-edu::before { border-color: var(--meta); }
+.tl-label { top: 0.85rem; }
+.tl-axis { border-top-style: dashed; }
+.tl-promo, .tl-promo-key {
+  display: inline-grid; place-items: center;
+  width: 1.05rem; height: 1.05rem; padding: 0;
+  border-radius: 50%; background: var(--accent); color: var(--surface);
+  font: 700 0.8rem/1 var(--mono);
+}
+.tl-promo-key { width: 0.85rem; height: 0.85rem; font-size: 0.65rem; margin-right: 0.3em; vertical-align: -0.15em; }
+
+/* ---------- CV ---------- */
+.cv .masthead h1 { font-size: 22pt; }
+.cv .tagline { font-size: 9.5pt; }
+.cv .section:first-child { border-top: 0.8pt solid var(--text); }
+.cv .tl-bar { height: 0.6mm; top: 1mm; }
+.cv .tl-bar::before { width: 2.2mm; height: 2.2mm; border-width: 0.5mm; }
+.cv .tl-promo { width: 3.4mm; height: 3.4mm; font-size: 7pt; }
+.cv .tl-promo-key { width: 2.6mm; height: 2.6mm; font-size: 5.5pt; }
+.cv .tl-label { top: 3mm; }
+.cv .tl-legend { margin-top: 0.8mm; text-align: right; font-size: 6pt; }
+.cv .skill-list { display: grid; grid-template-columns: 1fr; }
+.cv .skill { grid-template-columns: 32mm 10mm 1fr; column-gap: 2mm; }
+.cv .skill::after { display: none; }
+.cv .skill-years { grid-column: 2; }
+.cv .skill-body { grid-column: 3; grid-row: 1; }
+
+@media print {
+  :root { --bg: #fff; --text: #1b2230; --muted: #555; --accent: #3f6a32; --meta: #3f6390; --link: #1b2230; --rule: #cfd3c8; --sheet: #fff; }
+}

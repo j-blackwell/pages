@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 # Render the site locally for previewing. GitHub Pages does the real build on push.
 #
-#   ./build.sh          build into _site/ (gitignored) and print file:// links to open
+#   ./build.sh          build into _site/ (gitignored), print the CV to _site/cv.pdf, print file:// links
 #   ./build.sh serve    build, watch for changes and serve on http://localhost:4000
 #
 # Uses a local `jekyll` if one is installed, otherwise the jekyll/jekyll:pages Docker image.
+# The PDF needs Chrome or Chromium; the one-page check needs pdfinfo (poppler).
 set -euo pipefail
 cd "$(dirname "$0")"
 
@@ -14,7 +15,7 @@ pages=("" "portfolio-short.html")
 
 mode="${1:-build}"
 case "$mode" in
-  # baseurl = absolute path of _site/, so the theme's /assets/... links resolve over file://
+  # baseurl = absolute path of _site/, so root-relative links resolve over file://
   build) args=(build --baseurl "$site_dir") ;;
   serve) args=(serve --host 0.0.0.0 --port "$port" --watch --force_polling) ;;
   *) echo "usage: $0 [build|serve]" >&2; exit 1 ;;
@@ -39,7 +40,31 @@ if [[ "$mode" == serve ]]; then
   exec "${cmd[@]}"
 fi
 
+mkdir -p "$site_dir"  # create it as us, not as Docker's root
 "${cmd[@]}"
+
+# Print the CV to PDF.
+pdf="$site_dir/cv.pdf"
+chrome=""
+for c in chromium chromium-browser google-chrome-stable google-chrome; do
+  if command -v "$c" >/dev/null 2>&1; then chrome="$c"; break; fi
+done
+if [[ -n "$chrome" ]]; then
+  "$chrome" --headless --disable-gpu --no-pdf-header-footer --virtual-time-budget=5000 \
+    --print-to-pdf="$pdf" "file://$site_dir/portfolio-short.html" >/dev/null 2>&1
+  if command -v pdfinfo >/dev/null 2>&1; then
+    n=$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')
+    if [[ "$n" != 1 ]]; then
+      echo "WARNING: the CV is $n pages long; it should fit on one A4 page." >&2
+    fi
+  fi
+else
+  pdf=""
+  echo "Skipping cv.pdf: install Chrome or Chromium to print the CV." >&2
+fi
+
 echo
 echo "Built into _site/. Open:"
 for page in "${pages[@]}"; do echo "  file://$site_dir/${page:-index.html}"; done
+[[ -n "$pdf" ]] && echo "  file://$pdf"
+exit 0

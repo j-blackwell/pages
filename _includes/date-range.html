@@ -1,0 +1,2 @@
+{%- comment -%} Prints "2019–2021" or "2023–present" from include.start / include.end. {%- endcomment -%}
+{{- include.start | append: '' | slice: 0, 4 -}}–{%- if include.end -%}{{- include.end | append: '' | slice: 0, 4 -}}{%- else -%}present{%- endif -%}

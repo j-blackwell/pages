@@ -1,0 +1,41 @@
+{%- assign cv = site.data.cv -%}
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }}{% if page.cv %} – CV{% endif %}</title>
+  <meta name="description" content="{{ cv.tagline | markdownify | strip_html | strip }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body class="{% if page.cv %}cv{% else %}profile{% endif %}">
+  <div class="page">
+    <header class="masthead">
+      {%- unless page.cv %}
+      <img class="photo" src="{{ site.photo | relative_url }}" alt="Photo of {{ site.title }}" width="160" height="160">
+      {%- endunless %}
+      <div class="masthead-text">
+        <h1>{{ site.title }}</h1>
+        <p class="tagline">{{ cv.tagline | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+      </div>
+      <ul class="contact">
+        {%- for link in cv.links %}
+          {%- if page.cv %}
+            {%- if link.cv %}
+        <li><a href="{{ link.url | relative_url }}">{{ link.label | default: link.name }}</a></li>
+            {%- endif %}
+          {%- else %}
+            {%- unless link.profile == false %}
+        <li><a href="{{ link.url | relative_url }}">{{ link.name }}</a></li>
+            {%- endunless %}
+          {%- endif %}
+        {%- endfor %}
+      </ul>
+    </header>
+    {% include timeline.html %}
+    <main>
+{{ content }}
+    </main>
+  </div>
+</body>
+</html>
