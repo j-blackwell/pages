@@ -192,21 +192,40 @@ certifications:
       - DP-201: Designing an Azure Data Solution
 
 # Full profile only
-floorball: |
-  At university I picked up a strange sounding sport when I decided that £600+ for a set of ice hockey gear
-  was too much for a first year student.
-  Cast your mind back to the plastic hockey sticks and balls that you played with in primary school and
-  imagine that someone made this into a real sport -
-  [for example](https://www.youtube.com/watch?v=erB_FWi9-T8).
-  It's not that popular in the UK (and the name isn't helping), but has a great following in
-  north and central Europe.
-  The plus-side of playing a sport that no-one in your country has heard of, is that the pool of players for
-  the national team is very small.
-  So as a result, I've been lucky enough to represent Great Britain in 14 matches, scoring 4 goals in this
-  time, but my team GB days are behind me now.
+# `text` is the intro; each achievement is a card of big-number `stats`, with optional `url` and `summary`.
+floorball:
+  text: |
+    At university I picked up a strange sounding sport when I decided that £600+ for a set of ice hockey gear
+    was too much for a first year student.
+    Cast your mind back to the plastic hockey sticks and balls that you played with in primary school and
+    imagine that someone made this into a real sport -
+    [for example](https://www.youtube.com/watch?v=erB_FWi9-T8).
+    It's not that popular in the UK (and the name isn't helping), but has a great following in
+    north and central Europe.
+    The plus-side of playing a sport that no-one in your country has heard of, is that the pool of players for
+    the national team is very small.
+    So as a result, I've been lucky enough to represent Great Britain, but my team GB days are behind me now.
+
+  achievements:
+    - name: Great Britain
+      url: https://floorball.sport/player/1539596530/
+      summary: International career
+      stats:
+        - value: 14
+          label: caps
+        - value: 4
+          label: goals
+    - name: Club
+      url: https://englishfloorball.leaguerepublic.com/player/781206860.html
+      summary: Domestic honours
+      stats:
+        - value: 3
+          label: national champion
+        - value: 1
+          label: runner-up
 
 # Full profile only: shown in the page footer.
-disclaimer: All content written by me. Styling is written with a coding agent (I am not a front-end dev).
+disclaimer: All content written by me. Styling is written with a coding agent (I am not a front-end dev!).
 
 # Contact links shown in the page header.
 # `cv: true` also shows the link on the CV, using `label` (readable when printed).

@@ -7,6 +7,25 @@ layout: cv
 <section id="floorball" class="section floorball">
   <h2>Floorball</h2>
   <div class="section-body">
-    {{ cv.floorball | markdownify }}
+    {{ cv.floorball.text | markdownify }}
+    {%- if cv.floorball.achievements %}
+    <ul class="skill-list achievement-list">
+      {%- for card in cv.floorball.achievements %}
+      <li class="skill achievement">
+        <div class="skill-head">
+          <span class="skill-name">{% if card.url %}<a href="{{ card.url }}">{{ card.name }}</a>{% else %}{{ card.name }}{% endif %}</span>
+          {%- if card.summary %}
+          <span class="skill-years">{{ card.summary }}</span>
+          {%- endif %}
+        </div>
+        <dl class="stats">
+          {%- for stat in card.stats %}
+          <div class="stat"><dt>{{ stat.label }}</dt><dd>{{ stat.value }}</dd></div>
+          {%- endfor %}
+        </dl>
+      </li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
   </div>
 </section>

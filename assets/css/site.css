@@ -129,6 +129,12 @@ code { font-family: var(--mono); font-size: 0.88em; padding: 0.05em 0.3em; borde
 .profile .entry-name { display: block; }
 
 .floorball .section-body p { margin: 0; }
+/* Floorball achievements: skill-style cards with big numbers, label underneath */
+.achievement-list { margin-top: 1.25rem; }
+.stats { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; margin: 0.6rem 0 0; }
+.stat { display: flex; flex-direction: column-reverse; }
+.stat dd { margin: 0; font: 700 2.2rem/1 var(--sans); letter-spacing: -0.02em; color: var(--accent); font-variant-numeric: tabular-nums; }
+.stat dt { margin-top: 0.3rem; font: 400 0.8rem/1.3 var(--mono); color: var(--muted); }
 
 /* ---------- Timeline ---------- */
 .timeline { margin: 0; }
