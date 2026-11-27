@@ -25,17 +25,17 @@ profile: |
 skills:
   - name: python
     since: 2017
-    summary: "Favourite libraries / tools: dagster, polars, fastAPI, uv."
+    summary: "Favourite libraries / tools: `dagster`, `polars`, `fastAPI`, `uv`."
     details: |
-      - dagster expert - see [experience](#experience) for open-source contributions and plugins
-      - pandas, polars & pyspark
-      - flask & fastAPI
+      - `dagster` expert - see [experience](#experience) for open-source contributions and plugins
+      - `pandas`, `polars` & `pyspark`
+      - `flask` & `fastAPI`
   - name: SQL
     since: 2016
-    summary: "Favourite databases: duckdb, bigquery."
+    summary: "Favourite databases: `duckdb`, bigquery."
     details: |
-      - duckdb fan 🦆
-      - Worked with bigquery, duckdb, mysql, sqlite
+      - `duckdb` fan 🦆
+      - Worked with bigquery, `duckdb`, mysql, sqlite
   - name: Cloud platforms
     since: 2020
     summary: >-
@@ -43,12 +43,12 @@ skills:
       Favourite services: bigquery and google cloud run.
     details: |
       - Google Cloud - designed and created a full data platform at Ember using GCP (bigquery, cloud run, datastore, gcs)
-      - AWS - designed a duckdb database using parquet files stored on s3
+      - AWS - designed a `duckdb` database using parquet files stored on s3
       - Azure - Azure Data Engineer Associate certification
       - Databricks
   - name: git
     since: 2016
-    summary: "[lazygit](https://github.com/jesseduffield/lazygit) fan."
+    summary: "[`lazygit`](https://github.com/jesseduffield/lazygit) fan."
   - name: CI/CD
     since: 2022
     summary: "Including docker, infrastructure as code and github actions."
@@ -67,13 +67,13 @@ experience:
         start: 2024-08
     summary: |
       - Own engineering workstreams at Ember including:
-        - Ember's data orchestration platform in dagster
+        - Ember's data orchestration platform in `dagster`
           - I have also [contributed to the open-source project](https://github.com/dagster-io/dagster/pulls?q=is%3Apr+author%3Aj-blackwell)
-            and developed two open-source plugins [dagster-db](https://github.com/j-blackwell/dagster-db)
-            and [dagster-ibis](https://github.com/ember-energy/dagster-ibis).
+            and developed two open-source plugins [`dagster-db`](https://github.com/j-blackwell/dagster-db)
+            and [`dagster-ibis`](https://github.com/ember-energy/dagster-ibis).
           - Implemented bespoke and generalised testing and validation of data assets; extensive metadata
             collection to enable improved data cataloguing; improving team best practices; and onboarding
-            team members onto the dagster platform and implementing feedback to improve developer experience.
+            team members onto the `dagster` platform and implementing feedback to improve developer experience.
         - Data access platforms including an [API](https://ember-energy.org/data/api), public data hub and
           internal MCP.
           - Including databases, deployment, CICD, monitoring (performance and errors).
@@ -88,7 +88,7 @@ experience:
         - Qualified Mental Health First Aider and member of wellbeing working group.
       - Contributed to organisation AI and data team strategies, and supported funding applications.
     details: |
-      - Project managed the migration from our legacy codebase to the dagster platform (2025).
+      - Project managed the migration from our legacy codebase to the `dagster` platform (2025).
       - Running production data pipelines on schedules / sensors since early 2024, processing datasets at a
         rate and scale that was previously infeasible.
       - Moved our database to bigquery to help future-proof and enable reporting of finer-grain datasets.
@@ -148,9 +148,9 @@ projects:
       Open-source python packages on pypi, plus side projects in python, Rust and JavaScript.
     details: |
       I enjoy doing some hobby programming, too, and I love the open-source philosophy.
-      As well as my contribution to the dagster open-source ecosystem, I have a couple of other projects on pypi.
-      My main project at the moment is [ipydata](), an intuitive tool to load / operate on datasets within
-      databases or blob storage within notebooks or ipython sessions.
+      As well as my contribution to the `dagster` open-source ecosystem, I have a couple of other projects on pypi.
+      My main project at the moment is [`ipydata`](), an intuitive tool to load / operate on datasets within
+      databases or blob storage within notebooks or `ipython` sessions.
 
       I have dabbled in Rust and JavaScript and would welcome any opportunities to work with some non-python
       technologies / frameworks.
