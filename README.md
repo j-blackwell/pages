@@ -8,13 +8,13 @@ All content lives in one file, [`_data/cv.yml`](_data/cv.yml). Two pages render 
 
 | Page | Template | Shows |
 | --- | --- | --- |
-| `/` (full profile) | `index.html` | everything: profile, `summary` and `details` fields, certifications, hobbies, links |
-| `/portfolio-short.html` (one-page CV) | `portfolio-short.html` | skills, experience and education `summary` fields only |
+| `/` (full profile) | `index.html` | everything: profile, `summary` and `details` fields, certifications, floorball, links |
+| `/portfolio-short.html` (one-page CV) | `portfolio-short.html` | skills, experience, projects and education `summary` fields only |
 
 | File | Purpose |
 | --- | --- |
 | `_layouts/cv.html` | page shell: green header band (photo and profile on the full profile; contact links), then the timeline |
-| `_includes/cv.html` | experience, skills and education sections |
+| `_includes/cv.html` | skills, experience, projects and education sections |
 | `_includes/timeline.html` | career timeline built from role and education dates |
 | `_includes/month-index.html`, `date-range.html` | date helpers |
 | `assets/css/site.css` | all styles, including the A4 print layout for the CV |
@@ -23,7 +23,7 @@ All content lives in one file, [`_data/cv.yml`](_data/cv.yml). Two pages render 
 ## Editing
 
 - Text fields in `_data/cv.yml` are Markdown.
-- Add a `details:` field to any skill, job or school to show extra content on the full profile only.
+- Add a `details:` field to any skill, job, project or school to show extra content on the full profile only.
 - Dates (`start`, `end`, `since`) take a year (`2019`), year-month (`2019-09`) or full date.
   Leave out `end` for a current role. Pages show years; the timeline and skill years use months when given.
 - Years of experience for skills are calculated from `since` each time the site builds.

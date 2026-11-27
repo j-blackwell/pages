@@ -135,6 +135,35 @@ experience:
     details: |
       - Developed an R-Shiny app for conducting econometric analysis.
 
+# Unpaid dev work: open source, community and hobby projects.
+# `since` (and `end`) are optional; with `since` the entry shows e.g. "2024–present".
+# `url` is optional and links the name.
+projects:
+  - name: CADA network
+    url: https://autonomy.work/cada/
+    summary: Active contributor to the CADA network.
+  - name: Hobby programming
+    url: https://github.com/jrstats
+    summary: >-
+      Open-source python packages on pypi, plus side projects in python, Rust and JavaScript.
+    details: |
+      I enjoy doing some hobby programming, too, and I love the open-source philosophy.
+      As well as my contribution to the dagster open-source ecosystem, I have a couple of other projects on pypi.
+      My main project at the moment is [ipydata](), an intuitive tool to load / operate on datasets within
+      databases or blob storage within notebooks or ipython sessions.
+
+      I have dabbled in Rust and JavaScript and would welcome any opportunities to work with some non-python
+      technologies / frameworks.
+
+      When I've had a bit more time, I've also created a [smart mirror](https://github.com/jrstats/pymirror) in
+      python, set up email notifications whenever [@BrentfordFC](https://twitter.com/BrentfordFC/) (COYB!)
+      [tweet about tickets going on sale](https://github.com/jrstats/twitterNotifications), and
+      [optimised the Formula 1 calendar](https://github.com/jrstats/f1calendar/blob/master/solution.ipynb) to
+      reduce its emissions.
+      Again, feel free to take a look at them on my [github](https://github.com/jrstats) page.
+  - name: Linux
+    summary: Linux desktop user, currently running EndeavourOS.
+
 education:
   - name: University of Warwick
     label: Warwick
@@ -159,38 +188,18 @@ certifications:
     summary: "[Azure Data Engineer Associate certification](https://learn.microsoft.com/en-us/credentials/certifications/azure-data-engineer/)"
 
 # Full profile only
-hobbies:
-  - title: Hobby programming
-    body: |
-      I enjoy doing some hobby programming, too, and I love the open-source philosophy.
-      As well as my contribution to the dagster open-source ecosystem, I have a couple of other projects on pypi.
-      My main project at the moment is [ipydata](), an intuitive tool to load / operate on datasets within
-      databases or blob storage within notebooks or ipython sessions.
-
-      I have dabbled in Rust and JavaScript and would welcome any opportunities to work with some non-python
-      technologies / frameworks.
-
-      When I've had a bit more time, I've also created a [smart mirror](https://github.com/jrstats/pymirror) in
-      python, set up email notifications whenever [@BrentfordFC](https://twitter.com/BrentfordFC/) (COYB!)
-      [tweet about tickets going on sale](https://github.com/jrstats/twitterNotifications), and
-      [optimised the Formula 1 calendar](https://github.com/jrstats/f1calendar/blob/master/solution.ipynb) to
-      reduce its emissions.
-      Again, feel free to take a look at them on my [github](https://github.com/jrstats) page.
-
-      I'm also a fan of the Linux desktop, currently sporting the latest EndeavourOS release.
-  - title: Floorball
-    body: |
-      At university I picked up a strange sounding sport when I decided that £600+ for a set of ice hockey gear
-      was too much for a first year student.
-      Cast your mind back to the plastic hockey sticks and balls that you played with in junior school and
-      imagine that someone made this into a real sport -
-      [dramatic video explanation for anyone who's interested](https://www.youtube.com/watch?v=erB_FWi9-T8).
-      It's not that popular in the UK (and let's face it, the name doesn't help), but has a great following in
-      north and central Europe.
-      The plus-side of playing a sport that no-one in your country has heard of, is that the pool of players for
-      the national team is very small.
-      So as a result, I've been lucky enough to represent Great Britain in 14 matches, scoring 4 goals in this
-      time, but I think my team GB days are behind me now.
+floorball: |
+  At university I picked up a strange sounding sport when I decided that £600+ for a set of ice hockey gear
+  was too much for a first year student.
+  Cast your mind back to the plastic hockey sticks and balls that you played with in junior school and
+  imagine that someone made this into a real sport -
+  [dramatic video explanation for anyone who's interested](https://www.youtube.com/watch?v=erB_FWi9-T8).
+  It's not that popular in the UK (and let's face it, the name doesn't help), but has a great following in
+  north and central Europe.
+  The plus-side of playing a sport that no-one in your country has heard of, is that the pool of players for
+  the national team is very small.
+  So as a result, I've been lucky enough to represent Great Britain in 14 matches, scoring 4 goals in this
+  time, but I think my team GB days are behind me now.
 
 # Contact links shown in the page header.
 # `cv: true` also shows the link on the CV, using `label` (readable when printed).

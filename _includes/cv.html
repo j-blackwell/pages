@@ -1,5 +1,5 @@
 {%- comment -%}
-  Renders skills, experience and education from _data/cv.yml.
+  Renders skills, experience, projects and education from _data/cv.yml.
   Usage: {% include cv.html full=true %}  (full profile; omit `full` for the CV)
 {%- endcomment -%}
 {%- assign cv = site.data.cv -%}
@@ -71,6 +71,30 @@
       </div>
     </article>
   {%- endfor %}
+  </div>
+</section>
+
+{%- comment -%} Projects reuse the skill card layout, without the years bar. {%- endcomment -%}
+<section id="projects" class="section projects">
+  <h2>Projects</h2>
+  <div class="section-body">
+    <ul class="skill-list project-list">
+    {%- for project in cv.projects %}
+      <li class="skill project">
+        <div class="skill-head">
+          <span class="skill-name">{% if project.url %}<a href="{{ project.url }}">{{ project.name }}</a>{% else %}{{ project.name }}{% endif %}</span>
+          {%- if project.since %}
+          <span class="skill-years">{% include date-range.html start=project.since end=project.end %}</span>
+          {%- endif %}
+        </div>
+        {%- if full and project.details %}
+        <div class="skill-body">{{ project.details | markdownify }}</div>
+        {%- else %}
+        <div class="skill-body">{{ project.summary | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+        {%- endif %}
+      </li>
+    {%- endfor %}
+    </ul>
   </div>
 </section>
 

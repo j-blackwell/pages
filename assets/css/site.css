@@ -98,8 +98,11 @@ li::marker { color: var(--muted); }
 .job-roles li { margin: 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1rem; color: var(--muted); }
 .job-roles li:first-child { color: var(--ink); font-weight: 600; }
 
-/* Skills: years as a bar scaled to the longest-held skill. */
-.skill-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1.5rem 2rem; }
+/* Skills and projects: cards on the full profile, rows on the CV.
+   Skills show years as a bar scaled to the longest-held skill; projects have no bar. */
+.skill-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; }
+.profile .skill { padding: 1rem 1.1rem 1.1rem; background: var(--sheet); border: 1px solid var(--line); border-radius: 8px; }
+.profile .project .skill-head { margin-bottom: 0.45rem; }
 .skill { margin: 0; min-width: 0; font-size: 0.94rem; }
 .skill-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; }
 .skill-name { font-size: 1rem; font-weight: 700; }
@@ -108,6 +111,7 @@ li::marker { color: var(--muted); }
 .skill-body { color: var(--muted); }
 .skill-body p, .skill-body ul { margin: 0; }
 .skill-body > ul { list-style-type: disc; }
+.skill-body p + p { margin-top: 0.6em; }
 .skill-body a { color: inherit; }
 
 /* Education and certifications */
@@ -118,9 +122,7 @@ li::marker { color: var(--muted); }
 .entry-name { font-weight: 600; }
 .profile .entry-name { display: block; }
 
-.hobbies .section-body { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 2.5rem; }
-.hobby { min-width: 0; }
-.hobby h3 { margin-bottom: 0.4rem; }
+.floorball .section-body p { margin: 0; }
 
 /* ---------- Timeline ---------- */
 .timeline { margin: 0; }
@@ -138,7 +140,7 @@ li::marker { color: var(--muted); }
 @media (max-width: 46rem) {
   .profile .masthead { padding: 2.25rem 0 2.5rem; }
   .profile .masthead-inner, .profile .content { padding: 0 1rem; }
-  .profile .masthead-inner, .section, .hobbies .section-body { grid-template-columns: 1fr; }
+  .profile .masthead-inner, .section { grid-template-columns: 1fr; }
   .profile .photo { grid-row: auto; width: 6rem; height: 6rem; }
   .profile .masthead-text, .profile .contact { grid-column: 1; }
   .entry { grid-template-columns: 1fr; }
@@ -196,6 +198,11 @@ li::marker { color: var(--muted); }
 .cv .skill-name { font-size: inherit; }
 .cv .skill-meter { display: none; }
 .cv .skill-body { color: var(--ink); }
+/* project rows line up with skill rows; the years column is too narrow for a date range, so it goes at the end */
+.cv .project { grid-template-columns: 28mm 10mm 1fr auto; }
+.cv .project .skill-name { grid-column: 1 / 3; }
+.cv .project .skill-body { grid-column: 3; grid-row: 1; }
+.cv .project .skill-years { grid-column: 4; grid-row: 1; }
 
 .cv .entry-list { gap: 0.6mm; }
 .cv .entry-name { margin-right: 0.4em; }
@@ -207,5 +214,5 @@ li::marker { color: var(--muted); }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .cv .page { margin: 0; box-shadow: none; min-height: 0; }
   .cv a { text-decoration: none; }
-  .profile .job, .profile .skill, .profile .hobby { break-inside: avoid; }
+  .profile .job, .profile .skill { break-inside: avoid; }
 }
