@@ -1,39 +1,9 @@
 {%- comment -%}
-  Renders experience, skills and education from _data/cv.yml.
+  Renders skills, experience and education from _data/cv.yml.
   Usage: {% include cv.html full=true %}  (full profile; omit `full` for the CV)
 {%- endcomment -%}
 {%- assign cv = site.data.cv -%}
 {%- assign full = include.full -%}
-
-<section id="experience" class="section experience">
-  <h2>Experience</h2>
-  <div class="section-body">
-  {%- for job in cv.experience %}
-    {%- assign compact = false %}
-    {%- if job.compact and full != true %}{% assign compact = true %}{% endif %}
-    {%- assign current = false %}
-    {%- unless job.roles.last.end %}{% assign current = true %}{% endunless %}
-    <article class="job{% if compact %} job-compact{% endif %}{% if current %} job-current{% endif %}">
-      <header class="job-head">
-        <h3 class="job-org"><a href="{{ job.url }}">{{ job.org }}</a></h3>
-        <span class="years job-years">{% include date-range.html start=job.roles.first.start end=job.roles.last.end %}</span>
-        <ul class="job-roles">
-        {%- for role in job.roles reversed %}
-          <li><span class="role-title">{{ role.title }}</span> <span class="years">{% include date-range.html start=role.start end=role.end %}</span></li>
-        {%- endfor %}
-        </ul>
-      </header>
-      <div class="job-body">
-        {{ job.summary | markdownify }}
-        {%- if full and job.details %}
-        <h4>Additional details</h4>
-        {{ job.details | markdownify }}
-        {%- endif %}
-      </div>
-    </article>
-  {%- endfor %}
-  </div>
-</section>
 
 {%- comment -%} Years per skill, and the most of any skill, which sets the scale of the bars. {%- endcomment -%}
 {%- include month-index.html %}{% assign now_index = month_index %}
@@ -71,6 +41,36 @@
       </li>
     {%- endfor %}
     </ul>
+  </div>
+</section>
+
+<section id="experience" class="section experience">
+  <h2>Experience</h2>
+  <div class="section-body">
+  {%- for job in cv.experience %}
+    {%- assign compact = false %}
+    {%- if job.compact and full != true %}{% assign compact = true %}{% endif %}
+    {%- assign current = false %}
+    {%- unless job.roles.last.end %}{% assign current = true %}{% endunless %}
+    <article class="job{% if compact %} job-compact{% endif %}{% if current %} job-current{% endif %}">
+      <header class="job-head">
+        <h3 class="job-org"><a href="{{ job.url }}">{{ job.org }}</a></h3>
+        <span class="years job-years">{% include date-range.html start=job.roles.first.start end=job.roles.last.end %}</span>
+        <ul class="job-roles">
+        {%- for role in job.roles reversed %}
+          <li><span class="role-title">{{ role.title }}</span> <span class="years">{% include date-range.html start=role.start end=role.end %}</span></li>
+        {%- endfor %}
+        </ul>
+      </header>
+      <div class="job-body">
+        {{ job.summary | markdownify }}
+        {%- if full and job.details %}
+        <h4>Additional details</h4>
+        {{ job.details | markdownify }}
+        {%- endif %}
+      </div>
+    </article>
+  {%- endfor %}
   </div>
 </section>
 
