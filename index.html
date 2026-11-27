@@ -2,17 +2,16 @@
 layout: cv
 ---
 {%- assign cv = site.data.cv -%}
-<section id="profile" class="section profile">
-  <h2>Profile</h2>
-  {{ cv.profile | markdownify }}
-</section>
-
 {% include cv.html full=true %}
 
 <section id="hobbies" class="section hobbies">
   <h2>Outside work</h2>
+  <div class="section-body">
   {%- for hobby in cv.hobbies %}
-  <h3>{{ hobby.title }}</h3>
-  {{ hobby.body | markdownify }}
+    <div class="hobby">
+      <h3>{{ hobby.title }}</h3>
+      {{ hobby.body | markdownify }}
+    </div>
   {%- endfor %}
+  </div>
 </section>

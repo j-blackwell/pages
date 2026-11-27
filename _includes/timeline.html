@@ -22,7 +22,7 @@
 {%- assign span = tl_end | minus: tl_start -%}
 
 <figure class="timeline">
-  <figcaption>Timeline</figcaption>
+  <figcaption class="visually-hidden">Timeline</figcaption>
   <ol class="tl-bars">
   {%- for school in cv.education %}
     {%- if school.timeline == false %}{% continue %}{% endif %}
@@ -46,7 +46,7 @@
       {%- for role in job.roles %}
         {%- if forloop.first %}{% continue %}{% endif %}
         {%- include month-index.html date=role.start %}
-      <span class="tl-promo" style="--at: {{ month_index | minus: a | times: 100.0 | divided_by: jw }}%" title="Promoted to {{ role.title }}, {{ role.start | append: '' | slice: 0, 4 }}">+</span>
+      <span class="tl-promo" style="--at: {{ month_index | minus: a | times: 100.0 | divided_by: jw }}%" title="Promoted to {{ role.title }}, {{ role.start | append: '' | slice: 0, 4 }}"></span>
       {%- endfor %}
     </li>
   {%- endfor %}
@@ -56,5 +56,4 @@
     <li style="--l: {{ y | times: 12 | minus: tl_start | times: 100.0 | divided_by: span }}%">{{ y }}</li>
   {%- endfor %}
   </ol>
-  <p class="tl-legend"><span class="tl-promo-key">+</span> promotion</p>
 </figure>

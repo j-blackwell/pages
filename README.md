@@ -13,12 +13,12 @@ All content lives in one file, [`_data/cv.yml`](_data/cv.yml). Two pages render 
 
 | File | Purpose |
 | --- | --- |
-| `_layouts/cv.html` | page shell: header, photo, contact links, timeline |
-| `_includes/cv.html` | skills, experience and education sections |
+| `_layouts/cv.html` | page shell: green header band (photo and profile on the full profile; contact links), then the timeline |
+| `_includes/cv.html` | experience, skills and education sections |
 | `_includes/timeline.html` | career timeline built from role and education dates |
 | `_includes/month-index.html`, `date-range.html` | date helpers |
 | `assets/css/site.css` | all styles, including the A4 print layout for the CV |
-| `assets/fonts/` | self-hosted IBM Plex Sans and Mono (SIL Open Font License) |
+| `assets/fonts/` | self-hosted DM Sans and DM Mono (SIL Open Font License) |
 
 ## Editing
 
