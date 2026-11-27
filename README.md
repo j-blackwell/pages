@@ -35,8 +35,9 @@ All content lives in one file, [`_data/cv.yml`](_data/cv.yml). Two pages render 
 GitHub Pages builds and deploys the site on push to `main`; local builds are only for previewing.
 
 ```sh
-./build.sh          # render into _site/ (gitignored) and print the CV to _site/cv.pdf
-./build.sh serve    # live preview on http://localhost:4000
+./build.sh          # render into a new _site/<timestamp>/ folder (gitignored) with the CV printed to cv.pdf;
+                    # _site/latest points at the newest build
+./build.sh serve    # live preview on http://localhost:4000 (renders into _site/serve/)
 ```
 
 The script uses a local `jekyll` if installed, otherwise the `jekyll/jekyll:pages` Docker image.

@@ -1,24 +1,33 @@
 #!/usr/bin/env bash
 # Render the site locally for previewing. GitHub Pages does the real build on push.
 #
-#   ./build.sh          build into _site/ (gitignored), print the CV to _site/cv.pdf, print file:// links
-#   ./build.sh serve    build, watch for changes and serve on http://localhost:4000
+#   ./build.sh          build into a new timestamped folder _site/<YYYY-MM-DD_HH-MM-SS>/ (gitignored),
+#                       print the CV to cv.pdf inside it, point _site/latest at it, print file:// links
+#   ./build.sh serve    build into _site/serve/, watch for changes and serve on http://localhost:4000
 #
 # Uses a local `jekyll` if one is installed, otherwise the jekyll/jekyll:pages Docker image.
 # The PDF needs Chrome or Chromium; the one-page check needs pdfinfo (poppler).
 set -euo pipefail
 cd "$(dirname "$0")"
 
-site_dir="$PWD/_site"
+stamp="$(date +%Y-%m-%d_%H-%M-%S)"
 port=4000
 pages=("" "portfolio-short.html")
 
+# Each build gets its own folder. Jekyll empties its destination, so serve uses a
+# separate one rather than _site/ itself, which would wipe the timestamped builds.
 mode="${1:-build}"
 case "$mode" in
-  # baseurl = absolute path of _site/, so root-relative links resolve over file://
-  build) args=(build --baseurl "$site_dir") ;;
-  serve) args=(serve --host 0.0.0.0 --port "$port" --watch --force_polling) ;;
+  build) dest="_site/$stamp" ;;
+  serve) dest="_site/serve" ;;
   *) echo "usage: $0 [build|serve]" >&2; exit 1 ;;
+esac
+site_dir="$PWD/$dest"
+
+case "$mode" in
+  # baseurl = absolute path of the build folder, so root-relative links resolve over file://
+  build) args=(build --destination "$dest" --baseurl "$site_dir") ;;
+  serve) args=(serve --destination "$dest" --host 0.0.0.0 --port "$port" --watch --force_polling) ;;
 esac
 
 if command -v jekyll >/dev/null 2>&1; then
@@ -63,8 +72,10 @@ else
   echo "Skipping cv.pdf: install Chrome or Chromium to print the CV." >&2
 fi
 
+ln -sfn "$stamp" "$PWD/_site/latest"
+
 echo
-echo "Built into _site/. Open:"
+echo "Built into $dest/ (also at _site/latest/). Open:"
 for page in "${pages[@]}"; do echo "  file://$site_dir/${page:-index.html}"; done
 [[ -n "$pdf" ]] && echo "  file://$pdf"
 exit 0
