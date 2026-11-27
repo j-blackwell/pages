@@ -2,3 +2,7 @@ theme: jekyll-theme-tactile
 title: James Blackwell
 
 logo: ./profile-pic-square.png
+
+exclude:
+  - README.md
+  - build.sh

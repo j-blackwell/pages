@@ -1,0 +1,190 @@
+# Single source of content for both pages:
+#   /                      full profile     (index.html)
+#   /portfolio-short.html  short portfolio  (portfolio-short.html)
+#
+# `summary` fields appear on both pages; `details` fields only on the full profile.
+# Sections marked "full profile only" are not shown on the short portfolio.
+# All text fields are Markdown.
+
+tagline: Senior Data Engineer at [Ember](https://ember-energy.org)
+
+# Full profile only
+profile: |
+  I'm a python software engineer with experience in data science, data engineering and platform
+  architecture mainly in the water and energy industry.
+  I like building things related to data and hate doing things manually!
+  But I also like doing things the right way, using best practices and the right tool for the job.
+
+  I am passionate about the environment and other societal issues, and I'm motivated to use my skills
+  in the most valuable way to contribute towards these causes.
+
+  I am also an active contributor to the [CADA network](https://autonomy.work/cada/).
+
+skills:
+  - name: python
+    summary: "*9 years of experience*. Favourite libraries / tools: dagster, polars, fastAPI, uv."
+    details: |
+      - dagster expert - see [experience](#experience) for open-source contributions and plugins
+      - pandas, polars & pyspark
+      - flask & fastAPI
+  - name: SQL
+    summary: "*10 years of experience*. Favourite databases: duckdb, bigquery."
+    details: |
+      - duckdb fan 🦆
+      - Worked with bigquery, duckdb, mysql, sqlite
+  - name: Cloud platforms
+    summary: >-
+      *6 years of experience*. Have designed solutions on GCP, Azure and AWS.
+      Favourite services: bigquery and google cloud run.
+    details: |
+      - Google Cloud - designed and created a full data platform at Ember using GCP (bigquery, cloud run, datastore, gcs)
+      - AWS - designed a duckdb database using parquet files stored on s3
+      - Azure - Azure Data Engineer Associate certification
+      - Databricks
+  - name: git
+    summary: "*10 years of experience*. [lazygit](https://github.com/jesseduffield/lazygit) fan."
+  - name: CI/CD
+    summary: "*4 years of experience* including docker, infrastructure as code and github actions."
+
+# `compact: true` jobs are grouped under "Other" on the short portfolio.
+experience:
+  - org: Ember
+    url: https://ember-energy.org
+    roles:
+      - title: Data Engineer
+        years: 2023-2024
+      - title: Senior Data Engineer
+        years: 2024-present
+    summary: |
+      - Own engineering workstreams at Ember including:
+        - Ember's data orchestration platform in dagster
+          - I have also [contributed to the open-source project](https://github.com/dagster-io/dagster/pulls?q=is%3Apr+author%3Aj-blackwell)
+            and developed two open-source plugins [dagster-db](https://github.com/j-blackwell/dagster-db)
+            and [dagster-ibis](https://github.com/ember-energy/dagster-ibis).
+          - Implemented bespoke and generalised testing and validation of data assets; extensive metadata
+            collection to enable improved data cataloguing; improving team best practices; and onboarding
+            team members onto the dagster platform and implementing feedback to improve developer experience.
+        - Data access platforms including an [API](https://ember-energy.org/data/api), public data hub and
+          internal MCP.
+          - Including databases, deployment, CICD, monitoring (performance and errors).
+          - Developed a strong understanding of the opportunities to productionise AI, and where it should
+            not be used (yet?).
+      - Lead a small team of 5 mixed-experience, multi-discipline engineers, providing various levels of
+        support, mentoring and encouragement.
+        - Lead regular forums on knowledge sharing and best practices, embracing and encouraging use of
+          AI workflows once verifying that output is consistently high quality.
+        - Lead recruitment round for role with over 1100 applicants, managing the resultant pressures.
+        - Project manage projects including planning and managing team resource.
+        - Qualified Mental Health First Aider and member of wellbeing working group.
+      - Contributed to organisation AI and data team strategies, and supported funding applications.
+    details: |
+      - Project managed the migration from our legacy codebase to the dagster platform (2025).
+      - Running production data pipelines on schedules / sensors since early 2024, processing datasets at a
+        rate and scale that was previously infeasible.
+      - Moved our database to bigquery to help future-proof and enable reporting of finer-grain datasets.
+      - Provided data and feedback on the [Electricity Data Explorer](https://ember-energy.org/data/electricity-data-explorer/).
+      - Ran an organisation-wide pilot program of AI tooling (2025).
+
+  - org: Aiimi
+    url: https://aiimi.com
+    compact: true
+    roles:
+      - title: Data Consultant
+        years: 2019-2021
+      - title: Senior Data Engineer
+        years: 2021-2023
+    summary: |
+      - Migrated and modernised ETL pipelines. Developed a testing framework to improve data quality.
+      - Lead initiative and developed methodology to estimate internal carbon emissions from Azure usage.
+      - Other roles include: 'data community' leader; career shift mentor; apprentice mentor.
+    details: |
+      - Platform migration (utilities) - migrated ETL pipelines from an on-premise data warehouse to a
+        bespoke databricks-based cloud platform. The testing framework became part of the platform.
+      - Implemented a module to create a relational data model in Analysis Services using the bespoke data catalogue.
+      - Gained approval from the CEO to run a week-long hack to implement the carbon calculations into our
+        internal product.
+      - Other projects: COVID workforce management; Zero Emissions Hack (winner); utility demand modelling;
+        asset condition modelling; document classification.
+      - 'Data community' leader - developing resources and creating a space for data consultants to connect
+        and share ideas, lessons learned and best practices.
+      - Career shift mentor - helped a scrum master transition to data engineering by focusing their training.
+      - Apprentice mentor - helped an 18 year old data science apprentice transition from school into work.
+
+  - org: Havas Media Group
+    url: https://www.havas.com/
+    compact: true
+    roles:
+      - title: Junior Data Scientist
+        years: 2018-2019
+    summary: |
+      - Projects include: web-scraping analytics; automating econometric modelling.
+    details: |
+      - Developed an R-Shiny app for conducting econometric analysis.
+
+education:
+  - name: University of Warwick
+    summary: BSc [MORSE](https://warwick.ac.uk/study/undergraduate/courses/bsc-morse/) - Grade 2:1
+    years: 2014-2017
+  - name: Aylesbury Grammar School
+    summary: 4x A-Levels (A\*A\*A\*A) - 11x GCSE (A\*-B)
+    years: 2007-2014
+
+# Full profile only
+certifications:
+  - year: 2024
+    summary: |
+      [Grantham Institute Clean Power Program](https://www.imperial.ac.uk/grantham/education/online-learning-clean-power-programme/)
+      - Why Move Towards Cleaner Power
+      - Creating a Pro-Renewables Environment
+      - Incorporating Renewable Energy in Electricity Grids
+  - year: 2021
+    summary: "[Azure Data Engineer Associate certification](https://learn.microsoft.com/en-us/credentials/certifications/azure-data-engineer/)"
+
+# Full profile only
+hobbies:
+  - title: Hobby programming
+    body: |
+      I enjoy doing some hobby programming, too, and I love the open-source philosophy.
+      As well as my contribution to the dagster open-source ecosystem, I have a couple of other projects on pypi.
+      My main project at the moment is [ipydata](), an intuitive tool to load / operate on datasets within
+      databases or blob storage within notebooks or ipython sessions.
+
+      I have dabbled in Rust and JavaScript and would welcome any opportunities to work with some non-python
+      technologies / frameworks.
+
+      When I've had a bit more time, I've also created a [smart mirror](https://github.com/jrstats/pymirror) in
+      python, set up email notifications whenever [@BrentfordFC](https://twitter.com/BrentfordFC/) (COYB!)
+      [tweet about tickets going on sale](https://github.com/jrstats/twitterNotifications), and
+      [optimised the Formula 1 calendar](https://github.com/jrstats/f1calendar/blob/master/solution.ipynb) to
+      reduce its emissions.
+      Again, feel free to take a look at them on my [github](https://github.com/jrstats) page.
+
+      I'm also a fan of the Linux desktop, currently sporting the latest EndeavourOS release.
+  - title: Floorball
+    body: |
+      At university I picked up a strange sounding sport when I decided that £600+ for a set of ice hockey gear
+      was too much for a first year student.
+      Cast your mind back to the plastic hockey sticks and balls that you played with in junior school and
+      imagine that someone made this into a real sport -
+      [dramatic video explanation for anyone who's interested](https://www.youtube.com/watch?v=erB_FWi9-T8).
+      It's not that popular in the UK (and let's face it, the name doesn't help), but has a great following in
+      north and central Europe.
+      The plus-side of playing a sport that no-one in your country has heard of, is that the pool of players for
+      the national team is very small.
+      So as a result, I've been lucky enough to represent Great Britain in 14 matches, scoring 4 goals in this
+      time, but I think my team GB days are behind me now.
+
+# Full profile only (the short portfolio links back to the full profile instead)
+links:
+  - name: Short profile
+    url: /portfolio-short.html
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/james-blackwell-data/
+  - name: Email
+    url: mailto:james@blackwellmail.co.uk
+  - name: Github
+    url: https://github.com/j-blackwell
+  - name: Player Profile - International
+    url: https://floorball.sport/player/1539596530/
+  - name: Player Profile - UK
+    url: https://englishfloorball.leaguerepublic.com/player/781206860.html

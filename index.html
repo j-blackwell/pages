@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{%- assign cv = site.data.cv -%}
+<p>{{ cv.tagline | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+
+<h2 id="profile">Profile 🌍</h2>
+{{ cv.profile | markdownify }}
+
+{% include cv.html full=true %}
+
+<h2 id="hobbies">Hobbies 🥅</h2>
+{%- for hobby in cv.hobbies %}
+<h3>{{ hobby.title }}</h3>
+{{ hobby.body | markdownify }}
+{%- endfor %}
+
+<h2 id="links">Links 🔗</h2>
+<ul>
+{%- for link in cv.links %}
+  <li><a href="{{ link.url | relative_url }}">{{ link.name }}</a></li>
+{%- endfor %}
+</ul>
